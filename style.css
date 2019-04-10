@@ -1,0 +1,66 @@
+.burgermenu {
+    overflow: hidden;
+    background-color: #676767;
+    position: relative;
+    width: 100vw;
+    top: 0vw;
+    font-family: 'Staatliches', cursive;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+
+.burgermenu #myLinks {
+    display: none;
+}
+
+
+.burgermenu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+
+}
+
+
+.burgermenu a.icon {
+    background: #0a0a0a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.burgermenu a:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.burgermenu .active {
+    background-color: #333333;
+    color: white;
+
+}
+
+.burgermenu .active:hover {
+    background-color: #797878;
+    color: white;
+}
+
+.burgermenu a.icon:hover {
+    background-color: #ff0000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
