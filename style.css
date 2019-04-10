@@ -1,4 +1,9 @@
+.container {
+     display: none;
+}
+
 .burgermenu {
+
     overflow: hidden;
     background-color: #676767;
     position: relative;
@@ -63,4 +68,12 @@
 
 .clear {
     clear: both;
+}
+.hidden {
+    transform: scale(0);
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        display: block;
+    }
 }
