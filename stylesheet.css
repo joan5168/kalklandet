@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------Splash-----------------------*/
+nav {
+    background-color: dimgray;
+}
+
+.splash {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 60vw;
+    width: 100vw;
+}
+
+.sectionwrapper {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vw;
+}
+
+.overskift {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+
+/*-----------------------Stevns Klint-----------------------*/
+
+
+#introduktion .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.intro_billede {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 90vw;
+    height: 55vw;
+    width: 90vw;
+}
+
+#priser {
+    background-color: #7e7e7e;
+}
+
+#undervisning .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#undervisning {
+    background-color: #dbd6d6;
+}
+
+
+
+#guidede_ture {
+    background-color: #b2acac;
+}
+
+/*-----------------------Footer-----------------------*/
+footer {
+    background-color: dimgrey;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.facebook {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+}
+
+.instagram {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+}
+
+/*-----------------------media query-----------------------*/
+@media screen and (min-width: 650px) {
+    #introduktion .sectionwrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro_billede {
+        background-size: 45vw;
+        height: 30vw;
+        width: 45vw;
+        margin-left: 3vw;
+    }
+
+    #undervisning .sectionwrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #undervisning div:last-child {
+        margin-left: 2vw;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
