@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/***************************** BurgerMenu *******************/
 .container {
-     display: none;
+    display: none;
 }
 
 .burgermenu {
@@ -7,9 +13,9 @@
     overflow: hidden;
     background-color: #676767;
     position: relative;
-    width: 100vw;
+    width: 99vw;
     top: 0vw;
-    font-family: 'Staatliches', cursive;
+    font-family: ;
     opacity: 0.8;
     z-index: 10;
 }
@@ -21,6 +27,7 @@
 
 
 .burgermenu a {
+    cursor: pointer;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -69,11 +76,31 @@
 .clear {
     clear: both;
 }
+
 .hidden {
     transform: scale(0);
 }
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 425px) {
     .container {
         display: block;
     }
+}
+
+/***************************** Burgermenu slut *************************/
+
+/***************************** Om os ***********************************/
+
+.grid {
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+.grid > div {
+    background-color: lightgray;
+    padding: 1em;
+}
+
+.grid > div:nth-child(odd) {
+    background-color: darkgray;
 }

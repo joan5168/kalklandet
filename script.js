@@ -20,3 +20,6 @@ function myFunction() {
                 header.classList.remove("sticky");
             }
         }
+function closeFunction(x) {
+  x.classList.toggle("change");
+}
