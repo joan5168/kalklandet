@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalklandet</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,14 +16,25 @@
             <div class="sprog"></div>
         </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="koldkrigsmuseum.html">Koldkrigsmuseum</a>
-            <a href="stevnsklint.html">Stevns Klint</a>
-            <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
-            <a href="fakta.html">Fakta</a>
-            <a href="omos.html">Om os</a>
-        </nav>
+        <div class="container" class="hidden">
+
+            <div class="burgermenu" id="myBurgermenu">
+                <a href="index.html" class="active">Home</a>
+
+                <div id="myLinks">
+                    <a href="index.html">Home</a>
+                    <a href="koldkrigsmuseum.html">Koldkrigsmuseum Faxe</a>
+                    <a href="stevnsklint.html">Stevnsklint</a>
+                    <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
+                    <a href="fakta.html">Fakta</a>
+                    <a href="omos.html">Om Os</a>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
 
@@ -50,10 +62,6 @@
     </section>
 
     <section id="undervisning">
-        <div class="overskift">
-
-
-        </div>
         <div class="sectionwrapper">
             <div>
                 <h2>Undervisning</h2>
@@ -71,35 +79,34 @@
             <h2>Guidede ture</h2>
         </div>
         <div class="sectionwrapper">
-
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat cum tenetur doloremque repellendus, odit. Rerum et, delectus amet officiis labore ipsum nam dicta earum iste. Hic vel iure, eaque rerum!</p>
         </div>
     </section>
 
-    <script src=""></script>
+    <script src="script.js"></script>
 
     <footer>
         <div class="sectionwrapper">
-            <div class="overskift">
-                <h3>Åbningstider</h3>
-            </div>
-
-
-
+            <h3>Åbningstider</h3>
             <h4>Koldkrigsmuseum Stevnsfort, Stevns Klint og Geomuseum Faxe</h4>
-
-            <p>1. april – 30. juni alle dage kl. 11.00 - 15.00
-                1. juli – 30. september alle dage kl. 10.00 - 17.00
-                1. oktober – 31. oktober alle dage kl. 11.00 - 15.00
+            <p>1. april – 30. juni alle dage kl. 11.00 - 15.00<br><br>
+                1. juli – 30. sept. alle dage kl. 10.00 - 17.00<br><br>
+                1. oktober – 31. okt. alle dage kl. 11.00 - 15.00
             </p>
         </div>
         <div>
             <h3>Telefon nr. - email</h3>
+            <h4>Koldkrigsmuseum Stevnsfort, Stevns Klint og Geomuseum Faxe</h4>
+            <p>Telefon +45 56 50 28 06<br>
+                <br>museum@oesm.dk<br>
+                geomuseum@oesm.dk<br>
+                stevnsfort@oesm.dk<br>
+            </p>
         </div>
-        <div>
-            <div class="facebook"></div>
-            <div class="instagram"></div>
-        </div>
+
+        <div class="facebook"></div>
+        <div class="instagram"></div>
+
 
     </footer>
 
