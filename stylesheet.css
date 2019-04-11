@@ -102,15 +102,59 @@ nav {
     transform: scale(0);
 }
 
+/*----------------------- Forside-----------------------*/
+
+.grid {
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+.grid > div {
+    background-color: lightgray;
+    padding: 1em;
+}
+
+.grid > div:nth-child(odd) {
+    background-color: darkgray;
+}
+
+#Om_Os {
+    margin: 10px;
+    padding: 10px;
+    width: 96vw;
+    background-color: #e2e2e2;
+}
+
+/*----------------------- Grid til forside-----------------------**/
+
+.planlæg_besøg {
+    grid-area: besøg;
+}
+
+.Nyheder {
+    grid-area: nyheder;
+}
+
+.Illustrator_map {
+    grid-area: map;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        'besøg nyheder'
+        'map nyheder';
+    margin: 10px;
+    grid-template-columns: repeat(1fr 1fr);
+    grid-gap: 1em;
+}
 
 /*-----------------------Stevns Klint-----------------------*/
-
 
 #introduktion .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
 }
-
 
 .intro_billede {
     background-image: url(billeder/tomtbillede.png);
@@ -151,7 +195,6 @@ nav {
     background-color: #797878;
 }
 
-
 /*-----------------------Footer-----------------------*/
 footer {
     background-color: dimgrey;
@@ -175,7 +218,6 @@ footer div {
     padding-left: 5vw;
     padding-right: 5vw;
 }
-
 
 .facebook {
     background-image: url(billeder/tomtbillede.png);
@@ -252,10 +294,11 @@ footer div {
     }
 }
 
-/*----------------------Burger menu-----------------------*/
+/*----------------------Burger menu media query--------------------*/
 
 
 @media only screen and (max-width: 425px) {
     .container {
         display: block;
-    }}
+    }
+}
