@@ -3,6 +3,26 @@
     box-sizing: border-box;
 }
 
+body,
+html {
+    height: 100%;
+}
+
+/***************************** Splash ***********************/
+.splash {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 60vw;
+    width: 100vw;
+}
+
+/***************************** Nav **************************/
+nav {
+    display: none;
+    background-color: dimgray;
+}
+
 /***************************** BurgerMenu *******************/
 .container {
     display: none;
@@ -18,7 +38,6 @@
     opacity: 0.8;
     z-index: 10;
 }
-
 
 .burgermenu #myLinks {
     display: none;
@@ -101,4 +120,72 @@
 
 .grid > div:nth-child(odd) {
     background-color: darkgray;
+}
+
+#Om_Os {
+    margin: 10px;
+    padding: 10px;
+    width: 96vw;
+    background-color: #e2e2e2;
+}
+
+/***************************** Grid ***********************************/
+.planlæg_besøg {
+    grid-area: besøg;
+}
+
+.Nyheder {
+    grid-area: nyheder;
+}
+
+.Illustrator_map {
+    grid-area: map;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        'besøg nyheder'
+        'map nyheder';
+    margin: 10px;
+    grid-template-columns: repeat(1fr 1fr);
+    grid-gap: 1em;
+}
+
+
+/***************************** Footer ***********************************/
+footer {
+    background-color: dimgrey;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.facebook {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+}
+
+.instagram {
+    background-image: url(billeder/tomtbillede.png);
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+}
+
+/************************** Media Queries ***************************/
+
+@media only screen and (max-width: 425px) {
+    .container {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    nav {
+        display: block;
+    }
 }
