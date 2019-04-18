@@ -23,3 +23,4 @@ function myFunction() {
 function closeFunction(x) {
   x.classList.toggle("change");
 }
+

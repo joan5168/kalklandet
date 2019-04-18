@@ -190,7 +190,12 @@
 #column3 {
     background-color: #797878;
 }
+/*-----------------------Om os-----------------------*/
 
+.map {
+    width: 65vw;
+    margin: 5vw;
+}
 /*-----------------------Footer-----------------------*/
 footer {
     background-color: dimgrey;
@@ -211,6 +216,7 @@ footer p {
 }
 
 footer div {
+    margin-left: -20vw;
     padding-left: 5vw;
     padding-right: 5vw;
 }
@@ -221,7 +227,8 @@ footer div {
     background-size: 10vw;
     height: 6vw;
     width: 10vw;
-    margin-left: 80vw;
+    margin-top: 35vw;
+    margin-left: -30vw;
 }
 
 .instagram {
@@ -231,6 +238,7 @@ footer div {
     height: 6vw;
     width: 10vw;
     margin-left: 80vw;
+    margin-top: -6vw;
 
 }
 
