@@ -114,7 +114,7 @@
     background-color: darkgray;
 }
 
-#Om_Os {
+#om_os {
     margin: 10px;
     padding: 10px;
     width: 96vw;
@@ -123,15 +123,15 @@
 
 /*----------------------- Grid til forside-----------------------**/
 
-.planlæg_besøg {
+.planlaeg_besoeg {
     grid-area: besøg;
 }
 
-.Nyheder {
+.nyheder {
     grid-area: nyheder;
 }
 
-.Illustrator_map {
+.illustrator_map {
     grid-area: map;
 }
 
@@ -167,7 +167,7 @@
 #undervisning .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
-}
+    padding-top: 5vw;}
 
 #undervisning {
     background-color: #dbd6d6;
@@ -190,12 +190,14 @@
 #column3 {
     background-color: #797878;
 }
+
 /*-----------------------Om os-----------------------*/
 
 .map {
     width: 65vw;
     margin: 5vw;
 }
+
 /*-----------------------Footer-----------------------*/
 footer {
     background-color: dimgrey;
@@ -215,11 +217,6 @@ footer p {
     padding-top: 2vw;
 }
 
-footer div {
-    margin-left: -20vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
 
 .facebook {
     background-image: url(billeder/tomtbillede.png);
@@ -227,8 +224,6 @@ footer div {
     background-size: 10vw;
     height: 6vw;
     width: 10vw;
-    margin-top: 35vw;
-    margin-left: -30vw;
 }
 
 .instagram {
@@ -237,8 +232,6 @@ footer div {
     background-size: 10vw;
     height: 6vw;
     width: 10vw;
-    margin-left: 80vw;
-    margin-top: -6vw;
 
 }
 
@@ -264,7 +257,7 @@ footer div {
         grid-template-columns: 1fr 1fr;
     }
 
-    #undervisning div:last-child {
+    #undervisning div:nth-child(2) {
         margin-left: 2vw;
     }
 
