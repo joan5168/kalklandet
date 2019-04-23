@@ -5,7 +5,8 @@
     font-weight: 100;
 }
 
-body {
+body, html {
+    background-color: #BFB595;
     line-height: 150%;
 }
 
@@ -65,8 +66,13 @@ body {
     font-size: 25px;
     padding-left: 20px;
     padding-right: 20px;
-}
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
 
+}
+.hovedmenu a:hover {
+    opacity: 0.7;
+    color: #FF6600;
+}
 .splash {
     background-image: url(billeder/splash.png);
     background-repeat: no-repeat;
@@ -98,7 +104,10 @@ body {
     padding-right: 5vw;
     padding-top: 5vw;
 }
-
+#line {
+    width: 5vw;
+    color: #BFB595;
+}
 /*------------- BurgerMenu----------- */
 
 
@@ -170,6 +179,7 @@ body {
 /*--------------------------------------------- FORSIDE ---------------------------------------*/
 
 
+
 /*----------- Grid til forside-------------**/
 #grid {
     display: grid;
@@ -185,7 +195,6 @@ body {
 */
 
 #om_os {
-    background-color: white;
     margin-left: 27vw;
     margin-right: 27vw;
     margin-top: 10vw;
@@ -195,11 +204,17 @@ body {
 }
 
 #om_os h1 {
-    color: black;
+    color: white;
 }
-
+#om_os p {
+    color: white;
+}
 .planlaeg_besoeg {
     grid-area: besøg;
+}
+
+.nyheder p {
+    color: white;
 }
 
 .nyheder {
@@ -328,6 +343,42 @@ footer p {
     height: 6vw;
     width: 10vw;
 
+}
+
+/*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
+.fa-facebook-f:before, .fa-facebook:before {
+    content: "\f09a";
+    font-size: 25px;
+}
+.fa-instagram-f:before, .fa-instagram:before {
+    content: "\f09a";
+    font-size: 25px;
+    margin-left: -4px;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 180px;
+    border-radius: 10px;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #FF6600;
+    color: white;
+}
+
+.fa-instagram {
+    background: #FF6600;
+    color: white;
 }
 
 /*------------------------------------------ MEDIA QUESRIES -------------------------------------*/
