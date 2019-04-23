@@ -37,7 +37,7 @@
     overflow: hidden;
     background-color: #676767;
     position: relative;
-    width: 99vw;
+    width: 100vw;
     top: 0vw;
     font-family: ;
     opacity: 0.8;
@@ -167,7 +167,8 @@
 #undervisning .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 5vw;}
+    padding-top: 5vw;
+}
 
 #undervisning {
     background-color: #dbd6d6;
