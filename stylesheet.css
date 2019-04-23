@@ -185,11 +185,12 @@ body {
 */
 
 #om_os {
-    padding: 30vw;
     background-color: white;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    margin: 0vw;
+    margin-left: 27vw;
+    margin-right: 27vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding: 4vw;
     color: #7799A6;
 }
 
