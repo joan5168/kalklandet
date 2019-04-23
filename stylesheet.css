@@ -3,19 +3,87 @@
     box-sizing: border-box;
 }
 
+
+
+@font-face {
+    font-family: 'limestonebold';
+    src: url('fonte/limestone_bold-webfont.woff2') format('woff2'),
+        url('fonte/limestone_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'limestoneheavy';
+    src: url('fonte/limestone_heavy-webfont.woff2') format('woff2'),
+        url('fonte/limestone_heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'limestonelight';
+    src: url('fonte/limestone_light-webfont.woff2') format('woff2'),
+        url('fonte/limestone_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'limestoneregular';
+    src: url('fonte/limestone_regular-webfont.woff2') format('woff2'),
+        url('fonte/limestone_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /*-----------------------Splash-----------------------*/
 
 .hovedmenu {
     display: none;
-    background-color: dimgray;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+
+
+}
+
+.hovedmenu a {
+    color: #8C8279;
+    text-decoration: none;
+    font-family: 'limestonelight';
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
 }
 
 .splash {
-    background-image: url(billeder/tomtbillede.png);
+    background-image: url(billeder/splash.png);
     background-repeat: no-repeat;
     background-size: 100vw;
+    position: relative;
     height: 60vw;
     width: 100vw;
+}
+
+.logo {
+    background-image: url(billeder/logo2.png);
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    position: absolute;
+    top: 50vw;
+    left: 1vw;
+    height: 6vw;
+    width: 20vw;
 }
 
 .sectionwrapper {
@@ -117,7 +185,6 @@
 #om_os {
     margin: 10px;
     padding: 10px;
-    width: 96vw;
     background-color: #e2e2e2;
 }
 
