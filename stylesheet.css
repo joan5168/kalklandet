@@ -1,9 +1,13 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: helvetica;
+    font-weight: 100;
 }
 
-
+body {
+    line-height: 150%;
+}
 
 @font-face {
     font-family: 'limestonebold';
@@ -98,7 +102,7 @@
     padding-top: 5vw;
 }
 
-/*--------------------- BurgerMenu-------------------- */
+/*------------- BurgerMenu----------- */
 
 
 .burgermenu {
@@ -166,29 +170,33 @@
 }
 
 
-/*----------------------- Forside-----------------------*/
+/*--------------------------------------------- FORSIDE ---------------------------------------*/
 
-.grid {
+
+/*----------- Grid til forside-------------**/
+#grid {
     display: grid;
     grid-template-columns: 50%;
+    background-color: #7799A6;
+    padding: 2vw;
 }
 
-.grid > div {
-    background-color: lightgray;
-    padding: 1em;
-}
-
-.grid > div:nth-child(odd) {
+/*
+#grid > div:nth-child(odd) {
     background-color: darkgray;
 }
+*/
 
 #om_os {
-    margin: 10px;
-    padding: 10px;
-    background-color: #e2e2e2;
+    padding: 2vw;
+    background-color: white;
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
-/*----------------------- Grid til forside-----------------------**/
+#om_os h1 {
+    color: black;
+}
 
 .planlaeg_besoeg {
     grid-area: besøg;
@@ -202,17 +210,33 @@
     grid-area: map;
 }
 
-.grid {
-    display: grid;
-    grid-template-areas:
-        'besøg nyheder'
-        'map nyheder';
-    margin: 10px;
-    grid-template-columns: repeat(1fr 1fr);
-    grid-gap: 1em;
+.mapbillede {
+    background-image: url(billeder/svg/illustratormap.svg);
+    background-repeat: no-repeat;
+    background-size: 30vw;
+    height: 35vw;
+    width: 30vw;
+    margin-left: 5vw;
 }
 
-/*-----------------------Stevns Klint-----------------------*/
+#grid {
+    display: grid;
+    grid-template-areas:
+        'map nyheder'
+        'map nyheder';
+    grid-template-columns: repeat(1fr 1fr);
+}
+
+
+h1 {
+    font-family: 'limestonelight';
+    color: white;
+}
+
+
+
+
+/*---------------------------------------------- ATTRAKTIONER -------------------------------*/
 
 #introduktion .sectionwrapper {
     display: grid;
@@ -245,7 +269,7 @@
     background-color: #b2acac;
 }
 
-/*-----------------------Fakta-----------------------*/
+/*------------------------------------------------ FAKTA ------------------------------------*/
 
 #column1 {
     background-color: darkgrey;
@@ -259,16 +283,16 @@
     background-color: #797878;
 }
 
-/*-----------------------Om os-----------------------*/
+/*----------------------------------------------- OM OS ---------------------------------------*/
 
 .map {
     width: 65vw;
     margin: 5vw;
 }
 
-/*-----------------------Footer-----------------------*/
+/*----------------------------------------------- FOOTER --------------------------------------*/
 footer {
-    background-color: dimgrey;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -283,6 +307,7 @@ footer h4 {
 
 footer p {
     padding-top: 2vw;
+    color: black;
 }
 
 
@@ -303,7 +328,7 @@ footer p {
 
 }
 
-/*-----------------------media query-----------------------*/
+/*------------------------------------------ MEDIA QUESRIES -------------------------------------*/
 
 
 @media screen and (min-width: 650px) {
@@ -329,7 +354,7 @@ footer p {
         margin-left: 2vw;
     }
 
-    /*-----------------------Fakta-----------------------*/
+    /*---------------------------Fakta-----------------------*/
 
 
     #column1 .sectionwrapper {
@@ -347,19 +372,24 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
-    /*-----------------------Om os-----------------------*/
+    /*--------------------------Om os-----------------------*/
 
     #om_os .sectionwrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    /*-----------------------Footer-----------------------*/
+    /*-------------------------Footer-----------------------*/
 
     footer {
         grid-template-columns: 2fr 2fr 1fr;
     }
 }
+
+
+
+
+
 
 /*----------------------Burger menu media query--------------------*/
 
