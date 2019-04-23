@@ -11,10 +11,20 @@
 
 <body>
     <header>
+
         <div class="splash">
             <div class="logo"></div>
             <div class="sprog"></div>
         </div>
+
+        <nav class="hovedmenu">
+            <a href="index.html">Home</a>
+            <a href="koldkrigsmuseum.html">Koldkrigsmuseum</a>
+            <a href="stevnsklint.html">Stevns Klint</a>
+            <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
+            <a href="fakta.html">Fakta</a>
+            <a href="omos.html">Om os</a>
+        </nav>
 
         <div class="container" class="hidden">
 
@@ -36,6 +46,7 @@
             </div>
         </div>
     </header>
+
 
 
 
@@ -72,9 +83,11 @@
             <h2>Map</h2>
         </div>
 
-<!--        <div class="intro_billede"></div>-->
+        <!--        <div class="intro_billede"></div>-->
 
-<div class="map"><div id="googleMap" style="width:100%;height:400px;"></div></div>
+        <div class="map">
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+        </div>
         <script>
             function myMap() {
                 var mapProp = {
@@ -89,6 +102,8 @@
     </section>
 
     <!--    <script src="script.js"></script>-->
+
+
 
     <footer>
         <div class="sectionwrapper">
@@ -108,13 +123,15 @@
                 stevnsfort@oesm.dk<br>
             </p>
         </div>
-
-        <div class="facebook"></div>
-        <div class="instagram"></div>
+        <div>
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+        </div>
 
 
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
