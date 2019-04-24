@@ -65,10 +65,14 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam consequatur dicta ut, mollitia error alias, minima, corporis accusantium saepe laborum necessitatibus sapiente. Ut harum ullam cupiditate in, ducimus ipsam quibusdam fugiat placeat modi quas voluptate fugit officia laborum id eum illum voluptates! Officia sed ea a dolorum quaerat reprehenderit eos quis ex ullam iste cum repudiandae, sequi alias esse temporibus, consequuntur eum aliquid asperiores tempora voluptatibus magni nobis porro assumenda, dicta doloremque! Assumenda accusantium ad at provident totam id.
         </div>
 -->
-        <div class="nyheder">
-            <h1>Nyheder</h1><br>
-            <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit. A doloribus fugiat animi, totam aliquam et! Provident, id laudantium cupiditate consequatur quia, quisquam nobis eveniet expedita cum saepe aperiam, soluta perspiciatis eos laboriosam unde nostrum accusamus fugit natus reiciendis possimus impedit commodi. Iure in, suscipit delectus nostrum doloribus culpa, aperiam, maiores dolorem accusantium doloremque, provident laboriosam! Iusto a totam suscipit ullam, earum nobis nesciunt quidem, officiis vero accusantium sint voluptates. Sapiente, deleniti quis neque aut non fuga recusandae facilis, ad veniam?</p>
-        </div>
+        <template>
+            <section class="nyheder">
+                <h1>Nyheder</h1><br>
+                <!--                <div>class="indhold"></div>-->
+            </section>
+        </template>
+
+        <div class="nyheder"></div>
 
         <div class="illustrator_map">
             <h1>Map</h1>
@@ -102,8 +106,6 @@
             <a href="https://www.facebook.com/stevnsklint/" class="fa fa-facebook" target="_blank"></a>
             <a href="https://www.instagram.com/oestsjaellandsmuseum/" class="fa fa-instagram" target="_blank"></a>
         </div>
-
-
     </footer>
 
 
@@ -114,6 +116,7 @@
         console.log("indhold");
         document.addEventListener("DOMContentLoaded", getJson);
 
+        //        Om os
         async function getJson() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/posts/103";
             const myJson = await fetch(url);
@@ -123,11 +126,38 @@
             console.log(indhold);
 
             visIndhold();
+            getJson2();
+
         }
 
         function visIndhold() {
             console.log("indhold");
             document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+
+        }
+
+        //        Nyheder
+        async function getJson2() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/nyheder?per_page=7";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visNyheder();
+        }
+
+        function visNyheder() {
+            console.log(document.querySelector(".nyheder"));
+            let dest = document.querySelector(".nyheder");
+            let temp = document.querySelector("template");
+            indhold.forEach(nyheder => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h1").innerHTML = nyheder.title.rendered;
+                //                klon.querySelector("div").innerHTML = nyheder.info;
+                dest.appendChild(klon);
+            })
 
         }
     </script>
