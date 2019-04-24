@@ -81,7 +81,7 @@
         </div>
         <div class="sectionwrapper">
             <div class="indhold"></div>
-            <div class="intro_billede"></div>
+            <img src="" alt="">
         </div>
     </section>
 
@@ -95,7 +95,7 @@
             <h2></h2>
         </div>
         <div class="sectionwrapper">
-            <div class="intro_billede"></div>
+            <img src="" alt="">
             <div class="indhold"></div>
         </div>
     </section>
@@ -171,11 +171,19 @@
             document.querySelector("#kalkenskulturhistorie .indhold").innerHTML = indhold.kalkenskulturhistorie;
 
             //            Kalkens Geologi
-            document.querySelector("#kalkensgeologi .overskift h2").innerHTML = indhold.titlekalkenskulturhistorie;
+            document.querySelector("#kalkensgeologi .overskift h2").innerHTML = indhold.titlekalkensgeologi;
+            document.querySelector("#kalkensgeologi .indhold").innerHTML = indhold.kalkensgeologi;
+            document.querySelector("#kalkensgeologi img").src = indhold.billedekalkensgeologi.guid;
+
+            //            Den Kolde Krig
+            document.querySelector("#denkoldekrig .overskift h2").innerHTML = indhold.titledenkoldekrig;
+            document.querySelector("#denkoldekrig img").src = indhold.billededenkoldekrig.guid;
+            document.querySelector("#denkoldekrig .indhold").innerHTML = indhold.denkoldekrig;
 
 
 
         }
+
     </script>
 
 
