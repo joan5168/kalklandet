@@ -275,7 +275,6 @@ h1 {
     width: 90vw;
 }
 */
-
 #priser {
     background-color: #7e7e7e;
 }
@@ -291,9 +290,15 @@ h1 {
 }
 
 #guidede_ture {
+    padding: 5vw;
     background-color: #b2acac;
 }
-
+#guidede_ture .overskrift{
+    margin-bottom: 20px;
+}
+#guidede_ture .pris{
+    margin-top: 20px;
+}
 /*------------------------------------------------ FAKTA ------------------------------------*/
 
 #column1 {
@@ -311,7 +316,7 @@ h1 {
 /*----------------------------------------------- OM OS ---------------------------------------*/
 
 .map {
-    width: 65vw;
+    width: 95vw;
     margin: 5vw;
 }
 
@@ -443,18 +448,22 @@ footer p {
     #om_os .sectionwrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 5vw;
+        margin-left: -20vw;
     }
-
+    #om_os h1 {
+        margin-left: -20vw;
+    }
+    #om_os h2 {
+        margin-left: -5vw;
+        color: white;
+    }
     /*-------------------------Footer-----------------------*/
 
     footer {
         grid-template-columns: 2fr 2fr 1fr;
     }
 }
-
-
-
-
 
 
 /*----------------------Burger menu media query--------------------*/
