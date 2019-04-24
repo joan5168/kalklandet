@@ -57,6 +57,7 @@
             <h1></h1>
         </div>
         <div class="sectionwrapper">
+            <div class="priser"></div>
             <main class="indhold"></main>
             <img src="" alt="">
         </div>
@@ -66,17 +67,13 @@
 
 
 
-    <section id="priser">
-        <div class="overskift">
-            <h2></h2>
-        </div>
-        <div class="sectionwrapper">
-            <main class="indhold"></main>
-        </div>
+    <section id="guidede_ture">
+        <div class="overskrift"></div>
+        <main class="indhold"></main>
+        <div class="pris"></div>
+        <div class="paktiskinfo"></div>
+
     </section>
-
-
-
 
 
     <section id="undervisning">
@@ -95,15 +92,16 @@
 
 
 
-
-    <section id="guidede_ture">
-        <div class="overskift">
-            <h2></h2>
-        </div>
-        <div class="sectionwrapper">
-            <main class="indhold"></main>
-        </div>
-    </section>
+    <!--
+<section id="guidede_ture">
+    <div class="overskift">
+        <h2></h2>
+    </div>
+    <div class="sectionwrapper">
+        <main class="indhold"></main>
+    </div>
+</section>
+-->
 
 
 
@@ -180,28 +178,27 @@
             document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
             document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
             //            document.querySelector("#introduktion img").innerHTML = indhold.billede.guid;
-            document.querySelector("#priser .indhold").innerHTML = indhold.entrepris;
+            document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
 
         }
 
         async function getJson2() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256";
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/guidedeture/261";
             const myJson = await fetch(url);
             console.log(myJson);
 
             indhold = await myJson.json();
             console.log(indhold);
 
-            visIndhold();
+            visGuidettur();
 
         }
 
-        function visUndervisning() {
+        function visGuidettur() {
             console.log("indhold");
-            document.querySelector("#undervisning .undervisninginfo h2").innerHTML = indhold.title.rendered;
-            document.querySelector("#undervisning .indhold").innerHTML = indhold.introduktion;
-            //            document.querySelector("#introduktion img").innerHTML = indhold.billede.guid;
-            document.querySelector("#priser .indhold").innerHTML = indhold.entrepris;
+            document.querySelector("#guidede_ture .overskrift").innerHTML = indhold.title.rendered;
+            document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
+            document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
 
         }
     </script>
