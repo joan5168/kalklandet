@@ -5,7 +5,8 @@
     font-weight: 100;
 }
 
-body, html {
+body,
+html {
     background-color: #BFB595;
     line-height: 150%;
 }
@@ -69,10 +70,12 @@ body, html {
     border-left: 2px solid rgba(0, 0, 0, 0.15);
 
 }
+
 .hovedmenu a:hover {
     opacity: 0.7;
     color: #FF6600;
 }
+
 .splash {
     background-image: url(billeder/splash.png);
     background-repeat: no-repeat;
@@ -104,10 +107,12 @@ body, html {
     padding-right: 5vw;
     padding-top: 5vw;
 }
+
 #line {
     width: 5vw;
     color: #BFB595;
 }
+
 /*------------- BurgerMenu----------- */
 
 
@@ -206,9 +211,11 @@ body, html {
 #om_os h1 {
     color: white;
 }
+
 #om_os p {
     color: white;
 }
+
 .planlaeg_besoeg {
     grid-area: besøg;
 }
@@ -258,6 +265,8 @@ h1 {
     grid-template-columns: 1fr;
 }
 
+/*
+
 .intro_billede {
     background-image: url(billeder/tomtbillede.png);
     background-repeat: no-repeat;
@@ -265,6 +274,7 @@ h1 {
     height: 55vw;
     width: 90vw;
 }
+*/
 
 #priser {
     background-color: #7e7e7e;
@@ -346,15 +356,19 @@ footer p {
 }
 
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
-.fa-facebook-f:before, .fa-facebook:before {
+.fa-facebook-f:before,
+.fa-facebook:before {
     content: "\f09a";
     font-size: 25px;
 }
-.fa-instagram-f:before, .fa-instagram:before {
+
+.fa-instagram-f:before,
+.fa-instagram:before {
     content: "\f09a";
     font-size: 25px;
     margin-left: -4px;
 }
+
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -390,12 +404,14 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    /*
     .intro_billede {
         background-size: 45vw;
         height: 30vw;
         width: 45vw;
         margin-left: 3vw;
     }
+*/
 
     /*------------Stevns Klint og Geomuseum Faxe------------*/
 
