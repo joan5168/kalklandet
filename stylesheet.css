@@ -135,6 +135,8 @@ html {
     color: #BFB595;
 }
 
+/*------------- Generel ----------- */
+
 /*------------- BurgerMenu----------- */
 
 
@@ -203,7 +205,9 @@ html {
 
 
 /*--------------------------------------------- FORSIDE ---------------------------------------*/
-
+#forside_om_os {
+    background-color:
+}
 
 
 /*----------- Grid til forside-------------**/
@@ -246,6 +250,21 @@ html {
     color: white;
 }
 
+.nyheder h1 {
+    margin-bottom: 20px;
+}
+
+.nyheder h2 {
+    font-family: 'limestonelight';
+    font-size: 15px;
+
+}
+
+.illustrator_map h2 {
+    font-family: 'limestonelight';
+    color: white;
+}
+
 .nyheder {
     grid-area: nyheder;
 }
@@ -261,6 +280,7 @@ html {
     height: 35vw;
     width: 30vw;
     margin-left: 5vw;
+    margin-top: 5vw;
 }
 
 #grid {
@@ -273,7 +293,7 @@ html {
 
 
 h1 {
-    font-family: 'limestonelight';
+    font-family: ;
     color: white;
 }
 
@@ -364,16 +384,37 @@ h1 {
 }
 
 #kalkenskulturhistorie img {
+    margin-top: 5vw;
     width: 80vw;
+}
+
+#kalkenskulturhistorie p {
+    font-family: 'limestonelight';
+
+}
+
+#kalkenskulturhistorie .indhold {
+    margin-top: 5vw;
+
 }
 
 #kalkensgeologi .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+
 }
 
 #kalkensgeologi img {
+    margin-left: 5vw;
     width: 80vw;
+}
+
+#kalkensgeologi p {
+    font-family: 'limestonelight';
+}
+
+#kalkensgeologi .overskift h2 {
+    margin-bottom: 5vw;
 }
 
 #denkoldekrig .sectionwrapper {
@@ -382,9 +423,19 @@ h1 {
 }
 
 #denkoldekrig img {
+    margin-top: 5vw;
     width: 80vw;
 }
 
+#denkoldekrig h2 {
+    color: white;
+    font-family: 'limestonelight';
+}
+
+#denkoldekrig p {
+    margin-top: 5vw;
+    font-family: 'limestonelight';
+}
 
 /*----------------------------------------------- OM OS ---------------------------------------*/
 #om_os {
@@ -439,7 +490,12 @@ footer img {
     margin-left: 5vw;
     margin-bottom: 10vw;
 }
+#facebook {
 
+}
+#insta {
+  margin-top: -70px;
+}
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
 .fa-facebook-f:before,
 .fa-facebook:before {
@@ -535,6 +591,23 @@ footer img {
 
     /*---------------------------Fakta-----------------------*/
 
+    #kalkenskulturhistorie h2 {
+        color: white;
+    }
+
+    #kalkensgeologi {
+        background-color: #7799A6;
+        font-family:
+    }
+
+    #kalkensgeologi h2 {
+        color: white;
+    }
+
+    #denkoldekrig {
+        background-color: #8C8279;
+
+    }
 
     #column1 .sectionwrapper {
         display: grid;
