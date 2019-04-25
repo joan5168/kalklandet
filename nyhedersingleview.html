@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,45 @@
 
 
 <body>
+
+    <h1>Nyheder</h1>
+
+
+    <template>
+        <h2></h2>
+        <main class="indhold"></main>
+        <img src="" alt="">
+    </template>
+
+
+
     <script>
         let urlParams = new URLSearchParams(window.location.search); //viser et nyt vindue
         let id = urlParams.get("id");
         console.log(id);
 
-        const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/nyheder/" + id;
-        console.log(url);
+        document.addEventListener("DOMContentLoaded", start);
 
-        function start() {
+
+
+        async function start() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/nyheder/" + id;
+            console.log(url);
+            const myJson = await fetch(url);
+            indhold = await myJson.json();
+
+            console.log(indhold);
+
+            visNyhed();
+        }
+
+
+
+        function visNyhed() {
+            console.log("nyhed");
+
+            document.querySelector("template h2").innerHTML = indhold.title.rendered;
+            //            document.querySelector("template .indhold").innerHTML = indhold.;
 
         }
     </script>

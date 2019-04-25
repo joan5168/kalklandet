@@ -193,7 +193,6 @@ html {
     margin-right: 5vw;
     margin-top: 5vw;
     margin-bottom: 5vw;
-    padding: 4vw;
     color: #7799A6;
 }
 
@@ -208,9 +207,8 @@ html {
 
 #grid {
     display: grid;
-    grid-template-columns: 50%;
     background-color: #7799A6;
-    padding: 2vw;
+    padding: 5vw;
 }
 
 /*
@@ -247,9 +245,9 @@ html {
 #grid {
     display: grid;
     grid-template-areas:
-        'map nyheder'
-        'map nyheder';
-    grid-template-columns: repeat(1fr 1fr);
+        'map'
+        'nyheder';
+    grid-template-columns: repeat(1fr);
 }
 
 
@@ -456,6 +454,23 @@ footer p {
     color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------------ MEDIA QUESRIES -------------------------------------*/
 
 
@@ -515,6 +530,13 @@ footer p {
     #forside_om_os h2 {
         margin-left: -5vw;
         color: white;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-areas:
+            'map nyheder';
+        grid-template-columns: repeat(1fr 1fr);
     }
 
     /*--------------------------Om os-----------------------*/
