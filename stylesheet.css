@@ -51,6 +51,17 @@ html {
 
 }
 
+h1 {
+    font-family: 'limestonelight';
+}
+
+h2 {
+    font-family: 'limestonelight';
+}
+
+h3 {
+    font-family: 'limestonelight';
+}
 
 /*-----------------------Splash-----------------------*/
 
@@ -123,13 +134,13 @@ html {
 .sectionwrapper {
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-bottom: 5vw;
+    padding-bottom: 10vw;
 }
 
-.overskift {
+.overskrift {
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-top: 5vw;
+    padding-top: 10vw;
 }
 
 #line {
@@ -146,7 +157,7 @@ html {
     overflow: hidden;
     background-color: #676767;
     position: relative;
-    width: 98vw;
+    width: 100vw;
     top: 0vw;
     opacity: 0.8;
     z-index: 10;
@@ -248,18 +259,26 @@ html {
     grid-area: besøg;
 }
 
-.nyheder p {
-    color: white;
-}
+
 
 .nyheder h1 {
     margin-bottom: 20px;
 }
 
+#kasse_nyheder {
+    border: 2px solid white;
+    padding: 3vw;
+}
+
 .nyheder h2 {
     font-family: 'limestonelight';
     font-size: 15px;
+    color: white;
 
+}
+
+.nyheder a {
+    text-decoration: none;
 }
 
 .illustrator_map h2 {
@@ -269,6 +288,7 @@ html {
 
 .nyheder {
     grid-area: nyheder;
+
 }
 
 .illustrator_map {
@@ -312,10 +332,15 @@ h1 {
 
 #introduktion img {
     width: 90vw;
+    margin-top: 5vw;
 }
 
 #introduktion h1 {
-    padding-bottom: 1vw;
+    padding-bottom: 5vw;
+}
+
+#introduktion .indhold {
+    padding-top: 5vw;
 }
 
 
@@ -324,8 +349,9 @@ h1 {
 }
 
 .guidepriser {
-    background-color: #797979;
+    background-color: white;
     padding: 1vw;
+    margin-top: 5vw;
 }
 
 #undervisning .sectionwrapper {
@@ -338,12 +364,37 @@ h1 {
     background-color: #dbd6d6;
 }
 
-#guidede_ture {
-    background-color: #b2acac;
+.undervisning a {
+    text-decoration: none;
+    color: #FF6600;
+
 }
 
-#guidede_ture p {
+
+
+.undervisning {
+    border: 2px solid white;
+    padding: 3vw;
+    margin-left: 3vw;
+}
+
+
+
+#guidede_ture {
+    background-color: #7799A6;
+}
+
+#guidede_ture .indhold p {
     color: white;
+}
+
+#guidede_ture h3 {
+    color: darkorange;
+
+}
+
+.guidepriser p {
+    color: black;
 }
 
 #guidede_ture .sectionwrapper {
@@ -367,6 +418,11 @@ h1 {
 
 #undervisningsforloeb h2 {
     padding-bottom: 1vw;
+    color: white;
+}
+
+#undervisningsforloeb h3 {
+    color: white;
 }
 
 /*------------------------------------------------ FAKTA ------------------------------------*/
@@ -542,6 +598,40 @@ footer img {
 }
 
 
+/*----------------------------------------SINGLE VIEW-------------------------------------*/
+
+
+
+.nyhed h1 {
+    padding-bottom: 3vw;
+}
+
+
+.nyhed h2 {
+    padding-bottom: 2vw;
+}
+
+.nyhed .sectionwrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.indhold {}
+
+img {
+    width: 40vw;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -563,17 +653,29 @@ footer img {
 
 @media screen and (min-width: 650px) {
 
+
+
+
+
+
+    /*------------ATTRAKTIONER------------*/
+
     #introduktion .sectionwrapper {
         grid-template-columns: 1fr 1fr;
+        margin-top: 5vw;
     }
 
     #introduktion img {
         width: 45vw;
-        padding-left: 1vw;
+        padding-left: 5vw;
+        margin-top: 5vw;
+    }
+
+    #introduktion h1 {
+        padding-bottom: 2vw;
     }
 
 
-    /*------------Stevns Klint og Geomuseum Faxe------------*/
 
     #undervisning .sectionwrapper {
         grid-template-columns: 1fr 1fr;
@@ -591,6 +693,9 @@ footer img {
         margin-right: 10vw;
     }
 
+    .guidepriser {
+        margin-top: 0vw;
+    }
 
 
     #undervisningsforloeb .sectionwrapper {
