@@ -186,6 +186,26 @@ html {
 
 
 /*----------- Grid til forside-------------**/
+
+
+#forside_om_os {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding: 4vw;
+    color: #7799A6;
+}
+
+#forside_om_os h1 {
+    color: white;
+    text-align: center;
+}
+
+#forside_om_os p {
+    color: white;
+}
+
 #grid {
     display: grid;
     grid-template-columns: 50%;
@@ -198,23 +218,6 @@ html {
     background-color: darkgray;
 }
 */
-
-#om_os {
-    margin-left: 27vw;
-    margin-right: 27vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    padding: 4vw;
-    color: #7799A6;
-}
-
-#om_os h1 {
-    color: white;
-}
-
-#om_os p {
-    color: white;
-}
 
 .planlaeg_besoeg {
     grid-area: besøg;
@@ -293,12 +296,15 @@ h1 {
     padding: 5vw;
     background-color: #b2acac;
 }
-#guidede_ture .overskrift{
+
+#guidede_ture .overskrift {
     margin-bottom: 20px;
 }
-#guidede_ture .pris{
+
+#guidede_ture .pris {
     margin-top: 20px;
 }
+
 /*------------------------------------------------ FAKTA ------------------------------------*/
 
 #column1 {
@@ -313,7 +319,60 @@ h1 {
     background-color: #797878;
 }
 
+.faktaoverskrift {
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+
+
+#kalkenskulturhistorie .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#kalkenskulturhistorie img {
+    width: 80vw;
+}
+
+#kalkensgeologi .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#kalkensgeologi img {
+    width: 80vw;
+}
+
+#denkoldekrig .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#denkoldekrig img {
+    width: 80vw;
+}
+
+
 /*----------------------------------------------- OM OS ---------------------------------------*/
+#om_os {
+    margin-left: 27vw;
+    margin-right: 27vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding: 4vw;
+    color: #7799A6;
+}
+
+#om_os h1 {
+    color: white;
+    text-align: center;
+}
+
+#om_os p {
+    color: white;
+}
+
 
 .map {
     width: 95vw;
@@ -443,6 +502,21 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    /*--------------------------Forside Om os-----------------------*/
+
+
+    #forside_om_os {
+        margin-left: 25vw;
+        margin-right: 25vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    #forside_om_os h2 {
+        margin-left: -5vw;
+        color: white;
+    }
+
     /*--------------------------Om os-----------------------*/
 
     #om_os .sectionwrapper {
@@ -451,13 +525,16 @@ footer p {
         grid-column-gap: 5vw;
         margin-left: -20vw;
     }
+
     #om_os h1 {
         margin-left: -20vw;
     }
+
     #om_os h2 {
         margin-left: -5vw;
         color: white;
     }
+
     /*-------------------------Footer-----------------------*/
 
     footer {
@@ -476,5 +553,35 @@ footer p {
 
     .hovedmenu {
         display: block;
+    }
+
+
+    /*------- FAKTA -------*/
+
+    #kalkenskulturhistorie .sectionwrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #kalkenskulturhistorie img {
+        width: 40vw;
+    }
+
+    #kalkensgeologi .sectionwrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #kalkensgeologi img {
+        width: 40vw;
+    }
+
+    #denkoldekrig .sectionwrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #denkoldekrig img {
+        width: 40vw;
     }
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyheder</title>
+    <link rel="stylesheet" href="">
+</head>
+
+
+
+
+<body>
+    <section>
+        <div id="singleview">
+            <div id="tilbage"><button> ←</button></div>
+            <div id="indhold"></div>
+        </div>
+    </section>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let kategori;
+        let kategoriListe = [];
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                kategoriListe = await jsonData.json();
+                kategoriListe.forEach(obj => {
+                    if (obj.id == id) {
+                        kategori = obj;
+                    }
+                })
+                åben();
+            }
+
+            function åben() {
+                document.querySelector("#indhold").innerHTML = `
+                                <article class="kategori">
+                                    <h2>${kategori.navn}</h2>
+                                        <img src="imgs/large/${kategori.billede}.jpg" alt="${kategori.navn}">
+                                        <p>Kategori: ${kategori.kategori}</p>
+                                        <br>
+                                        <p>${kategori.lang}</p>
+                                        <p>Oprindelse: ${kategori.oprindelse}</p>
+                                        <p>Pris: ${kategori.pris} kr.</p
+                                 </article>
+                `
+            }
+            document.querySelector("#tilbage button").addEventListener("click", () => {
+                location.href = "indeksSingleview.html"
+            })
+            getJson();
+        }
+    </script>
+</body>
+
+
+
+</html>
