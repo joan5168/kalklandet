@@ -307,24 +307,25 @@ h1 {
 #introduktion .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+    padding-top: 5vw;
 }
 
 #introduktion img {
-    width: 40vw;
-}
-
-/*
-
-.intro_billede {
-    background-image: url(billeder/tomtbillede.png);
-    background-repeat: no-repeat;
-    background-size: 90vw;
-    height: 55vw;
     width: 90vw;
 }
-*/
+
+#introduktion h1 {
+    padding-bottom: 1vw;
+}
+
+
 #priser {
     background-color: #7e7e7e;
+}
+
+.guidepriser {
+    background-color: #797979;
+    padding: 1vw;
 }
 
 #undervisning .sectionwrapper {
@@ -339,6 +340,10 @@ h1 {
 
 #guidede_ture {
     background-color: #b2acac;
+}
+
+#guidede_ture p {
+    color: white;
 }
 
 #guidede_ture .sectionwrapper {
@@ -357,6 +362,11 @@ h1 {
 #undervisningsforloeb .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+    padding-top: 5vw;
+}
+
+#undervisningsforloeb h2 {
+    padding-bottom: 1vw;
 }
 
 /*------------------------------------------------ FAKTA ------------------------------------*/
@@ -441,11 +451,6 @@ h1 {
 
 /*----------------------------------------------- OM OS ---------------------------------------*/
 #om_os {
-    margin-left: 27vw;
-    margin-right: 27vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    padding: 4vw;
     color: #7799A6;
 }
 
@@ -460,7 +465,7 @@ h1 {
 
 
 .map {
-    width: 100vw;
+    width: 90vw;
     margin: 0;
 }
 
@@ -492,12 +497,13 @@ footer img {
     margin-left: 5vw;
     margin-bottom: 10vw;
 }
-#facebook {
 
-}
+#facebook {}
+
 #insta {
-  margin-top: -70px;
+    margin-top: -70px;
 }
+
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
 .fa-facebook-f:before,
 .fa-facebook:before {
@@ -561,14 +567,11 @@ footer img {
         grid-template-columns: 1fr 1fr;
     }
 
-    /*
-    .intro_billede {
-        background-size: 45vw;
-        height: 30vw;
+    #introduktion img {
         width: 45vw;
-        margin-left: 3vw;
+        padding-left: 1vw;
     }
-*/
+
 
     /*------------Stevns Klint og Geomuseum Faxe------------*/
 
@@ -581,7 +584,11 @@ footer img {
     }
 
     #guidede_ture .sectionwrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    #guidede_ture .indhold {
+        margin-right: 10vw;
     }
 
 
@@ -625,6 +632,7 @@ footer img {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     .dekoration_1 {
         position: absolute;
         width: 2px;
@@ -633,15 +641,17 @@ footer img {
         left: 2vw;
         background-color: white;
     }
-     .dekoration_2 {
+
+    .dekoration_2 {
         position: absolute;
         width: 28vw;
         height: 2px;
         top: 40vw;
         left: 2vw;
         background-color: white;
-         margin-bottom: 10px;
+        margin-bottom: 10px;
     }
+
     /*--------------------------Forside Om os-----------------------*/
 
 
@@ -670,15 +680,11 @@ footer img {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 5vw;
-        margin-left: -20vw;
     }
 
-    #om_os h1 {
-        margin-left: -20vw;
-    }
+    #om_os h1 {}
 
     #om_os h2 {
-        margin-left: -5vw;
         color: white;
     }
 

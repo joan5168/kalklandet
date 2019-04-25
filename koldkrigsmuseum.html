@@ -13,7 +13,9 @@
     <header>
 
         <div class="lillesplash">
-            <a href="index.html"><div class="lillelogo"></div></a>
+            <a href="index.html">
+                <div class="lillelogo"></div>
+            </a>
             <div class="sprog"></div>
         </div>
 
@@ -53,31 +55,35 @@
 
 
     <section id="introduktion">
-        <div class="overskift">
-            <h1></h1>
-        </div>
         <div class="sectionwrapper">
-            <div class="priser"></div>
+            <div>
+                <h1></h1>
+                <div class="priser"></div>
+                <main class="indhold"></main>
+            </div>
             <img src="" alt="">
-            <main class="indhold"></main>
+
 
         </div>
     </section>
 
     <section id="guidede_ture">
         <div class="overskift">
-            <h2></h2>
+            <h2></h2><br>
         </div>
         <div class="sectionwrapper">
             <main class="indhold"></main>
-            <div class="pris"></div>
+            <div class="guidepriser">
+                <h3>Priser</h3>
+                <div class="pris"></div>
+            </div>
             <div class="paktiskinfo"></div>
         </div>
 
     </section>
 
 
-<!--
+    <!--
 <section id="undervisning">
     <div class="sectionwrapper">
         <div class="undervisninginfo">
@@ -106,15 +112,19 @@
     </template>
 
 
-<section id="undervisningsforloeb">
-    <div class="sectionwrapper">
-<div class="undervisningstekst"></div>
-
-        <div class="undervisning">
-            <h1>Undervisningsforløb</h1>
+    <section id="undervisningsforloeb">
+        <div class="sectionwrapper">
+            <div>
+                <h2>Om vores undervisning</h2>
+                <div class="undervisningstekst"></div>
+            </div>
+            <div class="undervisning">
+                <div>
+                    <h2>Undervisningsforløb</h2>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -142,7 +152,7 @@
             </p>
         </div>
         <div>
-  <a href="https://www.facebook.com/stevnsklint/" target="_blank"><img src="billeder/facebookLogo.png" alt="facebook"></a>
+            <a href="https://www.facebook.com/stevnsklint/" target="_blank"><img src="billeder/facebookLogo.png" alt="facebook"></a>
             <a href="https://www.instagram.com/oestsjaellandsmuseum/" target="_blank"><img src="billeder/instagramLogo.png" alt="instagram" id="insta"></a>
         </div>
 
@@ -260,10 +270,9 @@
 
         function visUndervisningstekst() {
             console.log(document.querySelector(".undervisning"));
-            document.querySelector(".undervisning .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
+            document.querySelector("#undervisningsforloeb .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
         }
-
     </script>
 </body>
 
