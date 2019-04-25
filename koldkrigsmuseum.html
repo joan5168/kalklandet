@@ -77,22 +77,21 @@
     </section>
 
 
-
-
-
-
-    <section id="undervisning">
-        <div class="sectionwrapper">
-            <div class="undervisninginfo">
-                <h2></h2>
-                <main class="indhold"></main>
-            </div>
-            <div class="undervisningsforloeb">
-                <h2></h2>
-                <main class="indhold"></main>
-            </div>
+<!--
+<section id="undervisning">
+    <div class="sectionwrapper">
+        <div class="undervisninginfo">
+            <h2></h2>
+            <main class="indhold"></main>
         </div>
-    </section>
+        <div class="undervisningsforloeb">
+            <h2></h2>
+            <main class="indhold"></main>
+        </div>
+    </div>
+</section>-->
+
+
 
 
 
@@ -107,11 +106,15 @@
     </template>
 
 
-    <div class="undervisningstekst"></div>
-    <section class="undervisning">
-        <h1>Undervisningsforløb</h1>
-    </section>
+<section id="undervisningsforloeb">
+    <div class="sectionwrapper">
+<div class="undervisningstekst"></div>
 
+        <div class="undervisning">
+            <h1>Undervisningsforløb</h1>
+        </div>
+    </div>
+</section>
 
 
 
@@ -260,6 +263,7 @@
             document.querySelector(".undervisning .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
         }
+
     </script>
 </body>
 
