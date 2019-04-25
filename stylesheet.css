@@ -132,14 +132,14 @@ h3 {
 }
 
 .sectionwrapper {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-bottom: 10vw;
 }
 
 .overskrift {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 10vw;
 }
 
@@ -296,7 +296,7 @@ h3 {
 }
 
 .mapbillede {
-    background-image: url(billeder/svg/illustratormap.svg);
+    background-image: url(billeder/svg/illustratormap_med_logo.svg);
     background-repeat: no-repeat;
     background-size: 30vw;
     height: 35vw;
@@ -761,10 +761,10 @@ img {
 
 
     #forside_om_os {
-        margin-left: 25vw;
-        margin-right: 25vw;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        margin-top: 7vw;
+        margin-bottom: 7vw;
     }
 
     #forside_om_os h2 {
