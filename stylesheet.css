@@ -795,7 +795,9 @@ img {
         grid-column-gap: 5vw;
     }
 
-    #om_os h1 {}
+    #om_os .overskrift {
+        margin-bottom: 3vw;
+    }
 
     #om_os h2 {
         color: white;
