@@ -223,11 +223,11 @@ html {
 
 #forside_om_os h1 {
     color: white;
-    text-align: center;
 }
 
 #forside_om_os p {
     color: white;
+    font-family: 'limestonelight';
 }
 
 #grid {
@@ -293,7 +293,7 @@ html {
 
 
 h1 {
-    font-family: ;
+    font-family: 'limestonelight';
     color: white;
 }
 
@@ -458,8 +458,8 @@ h1 {
 
 
 .map {
-    width: 95vw;
-    margin: 5vw;
+    width: 100vw;
+    margin: 0;
 }
 
 /*----------------------------------------------- FOOTER --------------------------------------*/
@@ -623,7 +623,23 @@ footer img {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
+    .dekoration_1 {
+        position: absolute;
+        width: 2px;
+        height: 10vw;
+        top: 30vw;
+        left: 2vw;
+        background-color: white;
+    }
+     .dekoration_2 {
+        position: absolute;
+        width: 28vw;
+        height: 2px;
+        top: 40vw;
+        left: 2vw;
+        background-color: white;
+         margin-bottom: 10px;
+    }
     /*--------------------------Forside Om os-----------------------*/
 
 
