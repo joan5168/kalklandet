@@ -49,8 +49,8 @@
         </div>
     </header>
 
-  <div class="dekoration_1"></div>
-  <div class="dekoration_2"></div>
+    <div class="dekoration_1"></div>
+    <div class="dekoration_2"></div>
 
     <div class="faktaoverskrift">
         <h1>Fakta</h1>
@@ -70,7 +70,7 @@
 
     <section id="kalkenskulturhistorie">
 
-        <div class="overskift">
+        <div class="overskrift">
             <h2></h2>
         </div>
         <div class="sectionwrapper">
@@ -85,7 +85,7 @@
 
     <section id="kalkensgeologi">
 
-        <div class="overskift">
+        <div class="overskrift">
             <h2></h2>
         </div>
         <div class="sectionwrapper">
@@ -101,7 +101,7 @@
 
     <section id="denkoldekrig">
 
-        <div class="overskift">
+        <div class="overskrift">
             <h2></h2>
         </div>
         <div class="sectionwrapper">
@@ -181,18 +181,18 @@
             console.log("indhold");
 
             //            Kalkens Kulturhistorie
-            document.querySelector("#kalkenskulturhistorie .overskift h2").innerHTML = indhold.titlekalkenskulturhistorie;
+            document.querySelector("#kalkenskulturhistorie .overskrift h2").innerHTML = indhold.titlekalkenskulturhistorie;
             document.querySelector("#kalkenskulturhistorie img").src = indhold.billedekalkenskulturhistorie.guid;
             document.querySelector("#kalkenskulturhistorie .indhold").innerHTML = indhold.kalkenskulturhistorie;
             console.log(indhold.kalkenskulturhistorie);
 
             //            Kalkens Geologi
-            document.querySelector("#kalkensgeologi .overskift h2").innerHTML = indhold.titlekalkensgeologi;
+            document.querySelector("#kalkensgeologi .overskrift h2").innerHTML = indhold.titlekalkensgeologi;
             document.querySelector("#kalkensgeologi .indhold").innerHTML = indhold.kalkensgeologi;
             document.querySelector("#kalkensgeologi img").src = indhold.billedekalkensgeologi.guid;
 
             //            Den Kolde Krig
-            document.querySelector("#denkoldekrig .overskift h2").innerHTML = indhold.titledenkoldekrig;
+            document.querySelector("#denkoldekrig .overskrift h2").innerHTML = indhold.titledenkoldekrig;
             document.querySelector("#denkoldekrig img").src = indhold.billededenkoldekrig.guid;
             document.querySelector("#denkoldekrig .indhold").innerHTML = indhold.denkoldekrig;
 

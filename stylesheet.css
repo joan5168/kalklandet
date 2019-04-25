@@ -132,14 +132,14 @@ h3 {
 }
 
 .sectionwrapper {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-bottom: 10vw;
 }
 
 .overskrift {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-top: 10vw;
 }
 
@@ -427,6 +427,7 @@ h1 {
 
 /*------------------------------------------------ FAKTA ------------------------------------*/
 
+/*
 #column1 {
     background-color: darkgrey;
 }
@@ -437,10 +438,10 @@ h1 {
 
 #column3 {
     background-color: #797878;
-}
+}*/
 
 .faktaoverskrift {
-    margin-left: 5vw;
+    margin-left: 8vw;
     margin-top: 5vw;
 }
 
@@ -470,11 +471,13 @@ h1 {
     display: grid;
     grid-template-columns: 1fr;
 
+
 }
 
 #kalkensgeologi img {
     margin-left: 5vw;
     width: 80vw;
+    margin-left: 0;
 }
 
 #kalkensgeologi p {
@@ -714,8 +717,13 @@ img {
         font-family:
     }
 
+    #kalkensgeologi img {
+        margin-left: 5vw;
+    }
+
     #kalkensgeologi h2 {
         color: white;
+        margin-bottom: 5vw;
     }
 
     #denkoldekrig {
@@ -743,7 +751,7 @@ img {
         width: 2px;
         height: 10vw;
         top: 30vw;
-        left: 2vw;
+        left: 5vw;
         background-color: white;
     }
 
@@ -752,7 +760,7 @@ img {
         width: 28vw;
         height: 2px;
         top: 40vw;
-        left: 2vw;
+        left: 5vw;
         background-color: white;
         margin-bottom: 10px;
     }
