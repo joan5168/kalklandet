@@ -7,7 +7,6 @@
 
 body,
 html {
-    background-color: #BFB595;
     line-height: 150%;
     height: 100%;
 }
@@ -259,8 +258,6 @@ h3 {
     grid-area: besøg;
 }
 
-
-
 .nyheder h1 {
     margin-bottom: 20px;
 }
@@ -320,8 +317,6 @@ h1 {
 }
 
 
-
-
 /*---------------------------------------------- ATTRAKTIONER -------------------------------*/
 
 #introduktion .sectionwrapper {
@@ -342,7 +337,6 @@ h1 {
 #introduktion .indhold {
     padding-top: 5vw;
 }
-
 
 #priser {
     background-color: #7e7e7e;
@@ -367,10 +361,7 @@ h1 {
 .undervisning a {
     text-decoration: none;
     color: #FF6600;
-
 }
-
-
 
 .undervisning {
     border: 2px solid white;
@@ -550,6 +541,7 @@ footer p {
     color: black;
 }
 
+/*
 footer img {
     width: 5vw;
     margin-top: 3vw;
@@ -558,9 +550,29 @@ footer img {
 }
 
 #facebook {}
-
 #insta {
     margin-top: -70px;
+*/
+
+/*---Fælles for begge ikoner facebook & instagram---*/
+.icons img {
+    width: 8vw;
+    margin-bottom: 2vw;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+/*------------Styling på facebook icon--------------*/
+#facebook {
+    margin-left: 72vw;
+}
+
+/*-------------Styling på instragram icon-----------*/
+
+#instagram {
+    margin-left: 2vw;
 }
 
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
@@ -653,11 +665,17 @@ img {
 
 /*------------------------------------------ MEDIA QUESRIES -------------------------------------*/
 
+/*Styling mellem mobil og tablet - FOOTER*/
+@media screen and (min-width: 550px) {
+    .icons img {
+        width: 6.5vw;
+    }
+}
 
+
+
+/*---------------tablet--------------*/
 @media screen and (min-width: 650px) {
-
-
-
 
 
 
@@ -677,8 +695,6 @@ img {
     #introduktion h1 {
         padding-bottom: 2vw;
     }
-
-
 
     #undervisning .sectionwrapper {
         grid-template-columns: 1fr 1fr;
@@ -808,6 +824,27 @@ img {
     footer {
         grid-template-columns: 3fr 3fr 1fr;
     }
+
+    /*---Fælles for begge ikoner facebook & instagram---*/
+    .icons img {
+        width: 4.1vw;
+        margin-top: 3vw;
+    }
+
+    .icons a {
+        text-decoration: none;
+    }
+
+    /*------------Styling på facebook icon--------------*/
+    #facebook {
+        margin-left: 2vw;
+    }
+
+    /*-------------Styling på instragram icon-----------*/
+
+    #instagram {
+        margin-left: 2vw;
+    }
 }
 
 
@@ -852,4 +889,9 @@ img {
     #denkoldekrig img {
         width: 40vw;
     }
+}
+
+
+.icons img {
+    width: 2.5vw;
 }
