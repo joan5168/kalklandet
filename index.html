@@ -69,10 +69,11 @@
         </div>
 -->
         <template>
-            <section class="nyheder">
-                <h1>Nyheder</h1><br>
-                <!--                <div>class="indhold"></div>-->
-            </section>
+            <article class="nyheder">
+                <a href="">
+                    <h1>Nyheder</h1><br>
+                </a>
+            </article>
         </template>
 
         <div class="nyheder"></div>
@@ -160,9 +161,10 @@
             console.log(document.querySelector(".nyheder"));
             let dest = document.querySelector(".nyheder");
             let temp = document.querySelector("template");
-            indhold.forEach(nyheder => {
+            indhold.forEach(nyhed => {
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h1").innerHTML = nyheder.title.rendered;
+                klon.querySelector("h1").innerHTML = nyhed.title.rendered;
+                klon.querySelector("a").href = "nyhedersingleview.html" + "?" + "id=" + nyhed.id;
                 //                klon.querySelector("div").innerHTML = nyheder.info;
                 dest.appendChild(klon);
             })
