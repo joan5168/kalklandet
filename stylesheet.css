@@ -399,22 +399,11 @@ footer p {
     color: black;
 }
 
-
-.facebook {
-    background-image: url(billeder/tomtbillede.png);
-    background-repeat: no-repeat;
-    background-size: 10vw;
-    height: 6vw;
-    width: 10vw;
-}
-
-.instagram {
-    background-image: url(billeder/tomtbillede.png);
-    background-repeat: no-repeat;
-    background-size: 10vw;
-    height: 6vw;
-    width: 10vw;
-
+footer img {
+    width: 5vw;
+    margin-top: 3vw;
+    margin-left: 5vw;
+    margin-bottom: 10vw;
 }
 
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
@@ -560,7 +549,7 @@ footer p {
     /*-------------------------Footer-----------------------*/
 
     footer {
-        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-columns: 3fr 3fr 1fr;
     }
 }
 

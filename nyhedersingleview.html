@@ -15,12 +15,13 @@
 
     <h1>Nyheder</h1>
 
-
-    <template>
+    <!--ingen templete her, da vi ikke arbejder med liste-->
+    <main class="nyhed">
         <h2></h2>
-        <main class="indhold"></main>
+        <div class="indhold"></div>
         <img src="" alt="">
-    </template>
+    </main>
+
 
 
 
@@ -35,7 +36,6 @@
 
         async function start() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/nyheder/" + id;
-            console.log(url);
             const myJson = await fetch(url);
             indhold = await myJson.json();
 
@@ -49,10 +49,12 @@
         function visNyhed() {
             console.log("nyhed");
 
-            document.querySelector("template h2").innerHTML = indhold.title.rendered;
-            //            document.querySelector("template .indhold").innerHTML = indhold.;
+            document.querySelector(".nyhed h2").innerHTML = indhold.title.rendered;
+            document.querySelector(".nyhed .indhold").innerHTML = indhold.info;
+            document.querySelector(".nyhed img").src = indhold.billede.guid;
 
         }
+
     </script>
 </body>
 
