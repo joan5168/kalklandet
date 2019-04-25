@@ -53,32 +53,40 @@
 
 
 
+
+
+
     <section id="om_os">
         <div class="overskrift">
             <h1>Om os</h1>
             <h1>---</h1>
         </div>
         <div class="sectionwrapper">
-            <div>
+            <div id="koldkrig">
                 <div class="overskift">
-                    <h2>Koldkrigsmuseum</h2><br><br>
+                    <h2></h2><br><br>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="indhold"></div>
             </div>
-            <div>
+            <div id="geomuseum">
                 <div class="overskift">
-                    <h2>Geomuseum Faxe</h2><br><br>
+                    <h2></h2><br><br>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="indhold"></div>
             </div>
-            <div>
+            <div id="stevns">
                 <div class="overskift">
-                    <h2>Stevens Klint</h2><br><br>
+                    <h2></h2><br><br>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="indhold"></div>
             </div>
         </div>
     </section>
+
+
+
+
+
 
 
     <section id="fungerende_map">
@@ -144,7 +152,58 @@
 
     </footer>
 
+
+
+
+
+
+
+
+
+
     <script src="script.js"></script>
+
+
+
+    <script>
+        let indhold;
+        console.log("indhold");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/om/300";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visIndhold();
+        }
+
+
+        function visIndhold() {
+            console.log("vis indhold");
+
+            //     østsjællandsmuseum
+
+
+            document.querySelector("#stevns h2").innerHTML = indhold.titleoestsjaellandsmuseum;
+            document.querySelector("#stevns .indhold").innerHTML = indhold.kontaktoplysningeroestjlland;
+            console.log(indhold.kalkenskulturhistorie);
+
+            //       geomuseum faxe
+            document.querySelector("#geomuseum  h2").innerHTML = indhold.titlegeomuseumfaxe;
+            document.querySelector("#geomuseum .indhold").innerHTML = indhold.kontaktoplysningergeomuseum;
+
+            //       koldkrigsmuseum stevnsfort
+            document.querySelector("#koldkrig  h2").innerHTML = indhold.titlekoldkrigsmuseum;
+            document.querySelector("#koldkrig .indhold").innerHTML = indhold.kontaktoplysningerkoldkrig;
+
+
+
+        }
+    </script>
 </body>
 
 </html>
