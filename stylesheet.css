@@ -287,6 +287,10 @@ h1 {
     grid-template-columns: 1fr;
 }
 
+#introduktion img {
+    width: 40vw;
+}
+
 /*
 
 .intro_billede {
@@ -312,8 +316,12 @@ h1 {
 }
 
 #guidede_ture {
-    padding: 5vw;
     background-color: #b2acac;
+}
+
+#guidede_ture .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 #guidede_ture .overskrift {
@@ -507,6 +515,10 @@ footer img {
 
     #undervisning div:nth-child(2) {
         margin-left: 2vw;
+    }
+
+    #guidede_ture .sectionwrapper {
+        grid-template-columns: 1fr 1fr;
     }
 
     /*---------------------------Fakta-----------------------*/

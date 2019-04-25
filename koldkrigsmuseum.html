@@ -53,27 +53,32 @@
 
 
     <section id="introduktion">
-        <div class="overskift" style="margin-bottom: 50px;">
+        <div class="overskift">
             <h1></h1>
         </div>
         <div class="sectionwrapper">
             <div class="priser"></div>
-            <main class="indhold"></main>
             <img src="" alt="">
+            <main class="indhold"></main>
+
         </div>
     </section>
 
-
-
-
-
     <section id="guidede_ture">
-        <div class="overskrift"></div>
-        <main class="indhold"></main>
-        <div class="pris"></div>
-        <div class="paktiskinfo"></div>
+        <div class="overskift">
+            <h2></h2>
+        </div>
+        <div class="sectionwrapper">
+            <main class="indhold"></main>
+            <div class="pris"></div>
+            <div class="paktiskinfo"></div>
+        </div>
 
     </section>
+
+
+
+
 
 
     <section id="undervisning">
@@ -91,18 +96,21 @@
 
 
 
+    <template>
+        <article class="undervisning">
+            <div class="undervisningstekst"></div>
+            <div class="indhold"></div>
+            <a href="" target="_blank">
+                <h2></h2><br>
+            </a>
+        </article>
+    </template>
 
-    <!--
-<section id="guidede_ture">
-    <div class="overskift">
-        <h2></h2>
-    </div>
-    <div class="sectionwrapper">
-        <main class="indhold"></main>
-    </div>
-</section>
--->
 
+    <div class="undervisningstekst"></div>
+    <section class="undervisning">
+        <h1>Undervisningsforløb</h1>
+    </section>
 
 
 
@@ -160,6 +168,7 @@
 
 
 
+        // introtekst
         async function getJson() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256";
             const myJson = await fetch(url);
@@ -168,8 +177,11 @@
             indhold = await myJson.json();
             console.log(indhold);
 
+
             visIndhold();
             getJson2();
+            getJson3();
+            getJson4();
 
         }
 
@@ -177,11 +189,14 @@
             console.log("indhold");
             document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
             document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
-            //            document.querySelector("#introduktion img").innerHTML = indhold.billede.guid;
+            document.querySelector("#introduktion img").src = indhold.billede.guid;
             document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
+
+
 
         }
 
+        // guidede tur og priseer
         async function getJson2() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/guidedeture/261";
             const myJson = await fetch(url);
@@ -196,9 +211,53 @@
 
         function visGuidettur() {
             console.log("indhold");
-            document.querySelector("#guidede_ture .overskrift").innerHTML = indhold.title.rendered;
+            document.querySelector("#guidede_ture h2").innerHTML = indhold.title.rendered;
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
+
+        }
+
+
+        // Undervisnings forløb
+        async function getJson3() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page8";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visUndervisningsForloeb();
+        }
+
+        function visUndervisningsForloeb() {
+            console.log(document.querySelector(".undervisning"));
+            let dest = document.querySelector(".undervisning");
+            let temp = document.querySelector("template");
+            indhold.forEach(forloeb => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").innerHTML = forloeb.title.rendered;
+                klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id;
+                dest.appendChild(klon);
+            })
+
+        }
+
+        // undervisningstekst
+        async function getJson4() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visUndervisningstekst();
+        }
+
+        function visUndervisningstekst() {
+            console.log(document.querySelector(".undervisning"));
+            document.querySelector(".undervisning .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
         }
     </script>

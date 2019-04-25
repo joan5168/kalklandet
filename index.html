@@ -68,18 +68,21 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam consequatur dicta ut, mollitia error alias, minima, corporis accusantium saepe laborum necessitatibus sapiente. Ut harum ullam cupiditate in, ducimus ipsam quibusdam fugiat placeat modi quas voluptate fugit officia laborum id eum illum voluptates! Officia sed ea a dolorum quaerat reprehenderit eos quis ex ullam iste cum repudiandae, sequi alias esse temporibus, consequuntur eum aliquid asperiores tempora voluptatibus magni nobis porro assumenda, dicta doloremque! Assumenda accusantium ad at provident totam id.
         </div>
 -->
+
         <template>
+
             <article class="nyheder">
                 <a href="" target="_blank">
-                    <h1>Nyheder</h1><br>
+                    <h2></h2><br>
                 </a>
             </article>
         </template>
 
-        <div class="nyheder"></div>
+        <div class="nyheder">
+            <h1>Nyheder</h1>
+        </div>
 
         <div class="illustrator_map">
-            <h1>Map</h1>
             <a href=omos.html>
                 <div class="mapbillede"></div>
             </a>
@@ -171,12 +174,13 @@
             let temp = document.querySelector("template");
             indhold.forEach(nyhed => {
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h1").innerHTML = nyhed.title.rendered;
+                klon.querySelector("h2").innerHTML = nyhed.title.rendered;
                 klon.querySelector("a").href = "nyhedersingleview.html" + "?" + "id=" + nyhed.id; // vi tager fat i a href i html. Så vælger vi hvilken fil (html) den går til. Spørgsmålstegnet er når man bruger et link. Id er alle nyheder samlet. "nyheder. id" er måden vi får fat i de individuelle nyheder fra wordpress.
                 dest.appendChild(klon);
             })
 
         }
+
     </script>
 
 
