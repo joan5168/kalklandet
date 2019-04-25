@@ -58,6 +58,7 @@ h1 {
 
 h2 {
     font-family: 'limestonelight';
+    color: white;
 }
 
 h3 {
@@ -141,7 +142,7 @@ h3 {
 .overskrift {
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-top: 10vw;
+    padding-top: 6vw;
 }
 
 #line {
@@ -437,7 +438,7 @@ h1 {
 }*/
 
 .faktaoverskrift {
-    margin-left: 8vw;
+    margin-left: 5vw;
     margin-top: 5vw;
 }
 
