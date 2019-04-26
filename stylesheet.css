@@ -521,10 +521,13 @@ h1 {
 
 
 .map {
-    width: 90vw;
+    width: 100vw;
     margin: 0;
 }
-
+#fungerende_map h2 {
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+}
 /*----------------------------------------------- FOOTER --------------------------------------*/
 footer {
     background-color: white;
