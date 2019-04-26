@@ -295,10 +295,20 @@ h3 {
     font-family: 'limestonelight';
     font-size: 15px;
     color: white;
+
 }
+
 
 .nyheder a {
     text-decoration: none;
+
+
+}
+
+.nyheder h2:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+
 }
 
 .illustrator_map h2 {
