@@ -92,7 +92,7 @@ h3 {
 }
 
 .splash {
-    background-image: url(billeder/splash.png);
+    background-image: url(billeder/stevnsklint.png);
     background-repeat: no-repeat;
     background-size: 100vw;
     position: relative;
@@ -122,13 +122,15 @@ h3 {
     margin-left: 1vw;
 }
 
+
+
 .logo {
     background-image: url(billeder/logo3.svg);
     background-repeat: no-repeat;
     background-size: 20vw;
     position: absolute;
-    top: 45vw;
-    left: 1vw;
+    top: 5vw;
+    left: 3vw;
     height: 6vw;
     width: 20vw;
 }
@@ -401,7 +403,7 @@ h1 {
 }
 
 #guidede_ture .indhold {
-/*    grid-area: indhold;*/
+    /*    grid-area: indhold;*/
 }
 
 /*
@@ -432,7 +434,7 @@ h1 {
     /*    background-color: white;*/
     padding: 1vw;
     margin-top: 5vw;
-/*    grid-area: guidepriser;*/
+    /*    grid-area: guidepriser;*/
 }
 
 #guidede_ture .sectionwrapper {
@@ -442,7 +444,7 @@ h1 {
 
 #guidede_ture .overskrift {
     margin-bottom: 20px;
-/*    grid-area: overskrift;*/
+    /*    grid-area: overskrift;*/
 }
 
 #guidede_ture .pris {
