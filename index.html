@@ -16,14 +16,15 @@
     <header>
 
         <div class="splash">
-            <a href="index.html">
+            <a href="home.html">
                 <div class="logo"></div>
             </a>
+            <div class="whiteborder"></div>
             <div class="sprog"></div>
         </div>
 
         <nav class="hovedmenu">
-            <a href="index.html">Home</a>
+            <a href="home.html" class="valgt">Home</a>
             <a href="koldkrigsmuseum.html">Koldkrigsmuseum Stevnsfort</a>
             <a href="stevnsklint.html">Stevns Klint</a>
             <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
@@ -54,13 +55,14 @@
     </header>
 
 
-    <section id="forside_om_os">
+    <!--
+<section id="forside_om_os">
 
-        <h1>Hvem er vi?</h1>
-        <h1>---</h1><br>
-        <main class="indhold"></main>
-    </section>
-
+    <h1>Hvem er vi?</h1>
+    <h1>---</h1><br>
+    <main class="indhold"></main>
+</section>
+-->
 
 
     <section id="grid">
@@ -139,27 +141,27 @@
     <script>
         let indhold;
         console.log("indhold");
-        document.addEventListener("DOMContentLoaded", getJson);
+        document.addEventListener("DOMContentLoaded", getJson2);
 
         //        Om os
-        async function getJson() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/posts/103";
-            const myJson = await fetch(url);
-            console.log(myJson);
-
-            indhold = await myJson.json();
-            console.log(indhold);
-
-            visIndhold();
-            getJson2();
-
-        }
-
-        function visIndhold() {
-            console.log("indhold");
-            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
-
-        }
+        //      async function getJson() {
+        // const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/posts/103";
+        // const myJson = await fetch(url);
+        // console.log(myJson);
+        //
+        // indhold = await myJson.json();
+        // console.log(indhold);
+        //
+        // visIndhold();
+        // getJson2();
+        //
+        // }
+        //
+        // function visIndhold() {
+        // console.log("indhold");
+        // document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+        //
+        // }
 
         //        Nyheder
         async function getJson2() {

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalklandet</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <div class="lillesplash">
+            <a href="home.html">
+                <div class="lillelogo"></div>
+            </a>
+            <div class="sprog"></div>
+        </div>
+
+        <nav class="hovedmenu">
+
+            <a href="home.html" class="valgt">Home</a>
+            <a href="koldkrigsmuseum.html">Koldkrigsmuseum Stevnsfort</a>
+            <a href="stevnsklint.html">Stevns Klint</a>
+            <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
+            <a href="fakta.html">Fakta</a>
+            <a href="omos.html">Om os</a>
+            <a href=""></a>
+        </nav>
+
+        <div class="container" class="hidden">
+
+            <div class="burgermenu" id="myBurgermenu">
+                <a href="index.html" class="active">Home</a>
+
+                <div id="myLinks">
+                    <a href="home.html">Home</a>
+                    <a href="koldkrigsmuseum.html">Koldkrigsmuseum Faxe</a>
+                    <a href="stevnsklint.html">Stevnsklint</a>
+                    <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
+                    <a href="fakta.html">Fakta</a>
+                    <a href="omos.html">Om Os</a>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <section id="grid">
+        <!--
+        <div class="planlaeg_besoeg">
+            <h1>Besøg</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam consequatur dicta ut, mollitia error alias, minima, corporis accusantium saepe laborum necessitatibus sapiente. Ut harum ullam cupiditate in, ducimus ipsam quibusdam fugiat placeat modi quas voluptate fugit officia laborum id eum illum voluptates! Officia sed ea a dolorum quaerat reprehenderit eos quis ex ullam iste cum repudiandae, sequi alias esse temporibus, consequuntur eum aliquid asperiores tempora voluptatibus magni nobis porro assumenda, dicta doloremque! Assumenda accusantium ad at provident totam id.
+        </div>
+-->
+
+        <template>
+            <article class="nyheder">
+                <a href="" target="_blank">
+                    <h2></h2><br>
+                </a>
+            </article>
+        </template>
+
+        <section id="kasse_nyheder">
+            <div class="nyheder">
+                <h1>Nyheder</h1>
+                <h3>---</h3>
+            </div>
+        </section>
+
+        <div class="illustrator_map">
+            <h2>Besøg vores attraktioner</h2>
+            <a href=omos.html>
+                <div class="mapbillede"></div>
+            </a>
+        </div>
+    </section>
+    <section id="forside_om_os">
+
+        <h1>Hvem er vi?</h1>
+        <h1>---</h1><br>
+        <main class="indhold"></main>
+    </section>
+
+
+    <footer>
+        <div class="sectionwrapper">
+            <h3>Åbningstider</h3>
+            <h4>Koldkrigsmuseum Stevnsfort, Stevns Klint og Geomuseum Faxe</h4>
+            <p>1. april – 30. juni alle dage kl. 11.00 - 15.00<br>
+                1. juli – 30. sept. alle dage kl. 10.00 - 17.00<br>
+                1. oktober – 31. okt. alle dage kl. 11.00 - 15.00
+            </p>
+        </div>
+        <div class="sectionwrapper">
+            <h3>Telefon nr. - email</h3>
+            <h4>Koldkrigsmuseum Stevnsfort, Stevns Klint og Geomuseum Faxe</h4>
+            <p>Telefon +45 56 50 28 06<br>
+                <br>museum@oesm.dk<br>
+                geomuseum@oesm.dk<br>
+                stevnsfort@oesm.dk<br>
+            </p>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/stevnsklint/" target="_blank">
+                <img src="billeder/facebookLogo.png" alt="facebook" id="facebook">
+            </a>
+
+            <a href="https://www.instagram.com/oestsjaellandsmuseum/" target="_blank">
+                <img src="billeder/instagramLogo.png" alt="instagram" id="instagram">
+            </a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        let indhold;
+        console.log("indhold");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        //        Om os
+        async function getJson() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/posts/103";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visIndhold();
+            getJson2();
+
+        }
+
+        function visIndhold() {
+            console.log("indhold");
+            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+
+        }
+
+        //        Nyheder
+        async function getJson2() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/nyheder?per_page=7";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visNyheder();
+        }
+
+        function visNyheder() {
+            console.log(document.querySelector(".nyheder"));
+            let dest = document.querySelector(".nyheder");
+            let temp = document.querySelector("template");
+            indhold.forEach(nyhed => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").innerHTML = nyhed.title.rendered;
+                klon.querySelector("a").href = "nyhedersingleview.html" + "?" + "id=" + nyhed.id; // vi tager fat i a href i html. Så vælger vi hvilken fil (html) den går til. Spørgsmålstegnet er når man bruger et link. Id er alle nyheder samlet. "nyheder. id" er måden vi får fat i de individuelle nyheder fra wordpress.
+                dest.appendChild(klon);
+            })
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
