@@ -328,6 +328,22 @@ h1 {
 
 /*---------------------------------------------- ATTRAKTIONER -------------------------------*/
 
+
+/*baggrundsfarver*/
+
+#introduktion {
+    background-color: #aac9d5;
+}
+
+#guidede_ture {
+    background-color: #8bacb8;
+}
+
+#undervisningsforloeb {
+    background-color: #7799A6;
+}
+
+/*ander*/
 #introduktion .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -347,15 +363,13 @@ h1 {
     padding-top: 5vw;
 }
 
+
+
 #priser {
     background-color: #7e7e7e;
 }
 
-.guidepriser {
-    background-color: white;
-    padding: 1vw;
-    margin-top: 5vw;
-}
+
 
 #undervisning .sectionwrapper {
     display: grid;
@@ -363,35 +377,62 @@ h1 {
     padding-top: 5vw;
 }
 
-#undervisning {
-    background-color: #dbd6d6;
-}
+
 
 .undervisning a {
     text-decoration: none;
     color: #FF6600;
 }
 
-.undervisning {
+.undervisning .sectionwrapper {
+    padding-top: 5vw;
+}
+
+#undervisningsforloeb .undervisning {
     border: 2px solid white;
     padding: 3vw;
     margin-left: 3vw;
 }
 
-#guidede_ture {
-    background-color: #7799A6;
-}
 
+/*---GUIDET TURER----*/
 #guidede_ture .indhold p {
     color: white;
 }
 
-#guidede_ture h3 {
-    color: darkorange;
+#guidede_ture .indhold {
+/*    grid-area: indhold;*/
 }
 
+/*
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-areas:
+        "overskrift guidepriser"
+        "indhold guidepriser";
+}
+*/
+
+
 .guidepriser p {
-    color: black;
+    color: white;
+
+}
+
+.guidepriser h3 {
+    color: white;
+    border: 2px solid white;
+    padding: 2vw;
+
+}
+
+.guidepriser {
+    /*    background-color: white;*/
+    padding: 1vw;
+    margin-top: 5vw;
+/*    grid-area: guidepriser;*/
 }
 
 #guidede_ture .sectionwrapper {
@@ -401,12 +442,14 @@ h1 {
 
 #guidede_ture .overskrift {
     margin-bottom: 20px;
+/*    grid-area: overskrift;*/
 }
 
 #guidede_ture .pris {
     margin-top: 20px;
 }
 
+/*---UNDERVSINING----*/
 #undervisningsforloeb .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -485,6 +528,8 @@ h1 {
     margin-bottom: 5vw;
 }
 
+
+
 #denkoldekrig .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -520,14 +565,55 @@ h1 {
 }
 
 
+/*-----------MAP------------*/
+/*
 .map {
     width: 100vw;
     margin: 0;
 }
+*/
+
 #fungerende_map h2 {
     margin-bottom: 2vw;
     margin-left: 2vw;
 }
+
+#fungerende_map {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+}
+
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 1300px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 1300px;
+}
+
 /*----------------------------------------------- FOOTER --------------------------------------*/
 footer {
     background-color: white;
@@ -691,7 +777,6 @@ img {
 
     #introduktion .sectionwrapper {
         grid-template-columns: 1fr 1fr;
-        margin-top: 5vw;
     }
 
     #introduktion img {
@@ -713,7 +798,7 @@ img {
     }
 
     #guidede_ture .sectionwrapper {
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 
     #guidede_ture .indhold {
