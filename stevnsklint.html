@@ -119,13 +119,16 @@
             </div>
             <div>
                 <h2>Undervisningsforloeb</h2>
-                <main class="indhold"></main>
+
+                <article class="undervisningsforloeb">
+                    <main class="indhold"></main>
+                </article>
+
 
             </div>
+
         </div>
     </section>
-
-
 
 
     <footer>
@@ -214,6 +217,24 @@
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
             document.querySelector("#guidede_ture .praktiskInfo").innerHTML = indhold.praksisinfo;
+
+        }
+
+        // Undervisnings forløb
+        async function getJson3() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/282";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visUndervisningsForloeb();
+        }
+
+        function visUndervisningsForloeb() {
+            console.log(document.querySelector(".undervisning"));
+            document.querySelector("#undervisning .undervisningsforloeb").innerHTML = indhold.title.rendered;
 
         }
     </script>
