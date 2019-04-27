@@ -291,6 +291,11 @@ h3 {
     padding: 3vw;
 }
 
+#kasse_nyheder h1 {
+    font-size: 24px;
+    color: #32383b
+}
+
 .nyheder h2 {
     font-family: 'limestonelight';
     font-size: 15px;
