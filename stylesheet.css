@@ -1126,8 +1126,19 @@ img {
 
 /*---------DESKTOP ekstra finpusning-------*/
 
-@media screen and (min-width: 900px) {
+/*menu baren*/
+@media screen and (min-width: 916px) {
     .hovedmenu {
-        padding-left: 13vw;
+        padding-left: 8vw;
 
     }
+
+    @media screen and (min-width: 973px) {
+        .hovedmenu {
+            padding-left: 10vw;
+        }
+
+        @media screen and (min-width: 1056px) {
+            .hovedmenu {
+                padding-left: 12vw;
+            }
