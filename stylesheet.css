@@ -1016,8 +1016,17 @@ img {
 
     /*------- FOOTER -------*/
 
+
     .icons img {
-        width: 3vw;
+        width: 3.2vw;
+    }
+
+    #facebook:hover {
+        width: 2.8vw;
+    }
+
+    #instagram:hover {
+        width: 2.8vw;
     }
 
 }
