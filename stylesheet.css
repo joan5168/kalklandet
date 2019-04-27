@@ -300,20 +300,15 @@ h3 {
     font-family: 'limestonelight';
     font-size: 15px;
     color: white;
-
 }
-
 
 .nyheder a {
     text-decoration: none;
-
-
 }
 
 .nyheder h2:hover {
     text-decoration: underline;
     text-decoration-color: white;
-
 }
 
 .illustrator_map h2 {
@@ -342,8 +337,7 @@ h3 {
 
 #grid {
     display: grid;
-    grid-template-areas:
-        'map'
+    grid-template-areas: 'map'
         'nyheder';
     grid-template-columns: repeat(1fr);
 }
@@ -700,6 +694,7 @@ footer img {
 }
 
 /*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
+/*
 .fa-facebook-f:before,
 .fa-facebook:before {
     content: "\f09a";
@@ -733,7 +728,7 @@ footer img {
 .fa-instagram {
     background: #FF6600;
     color: white;
-}
+}*/
 
 
 /*----------------------------------------SINGLE VIEW-------------------------------------*/
@@ -756,9 +751,12 @@ footer img {
 
 .indhold {}
 
+/*
+
 img {
     width: 40vw;
 }
+*/
 
 
 
@@ -925,12 +923,25 @@ img {
         color: white;
     }
 
+    /*-------------------------Besøg vores attraktioner-----------------------*/
+
     #grid {
         display: grid;
-        grid-template-areas:
-            'map map nyheder';
-        grid-template-columns: repeat(2fr 1fr);
+        /*
+        grid-template-areas: 'map map nyheder';
+*/
+        grid-template-columns: 2fr 1fr;
     }
+
+    .illustrator_map .mapbillede {
+        background-size: 35vw;
+        height: 35vw;
+        width: 40vw;
+        margin-left: 8vw;
+        margin-top: 5vw;
+
+    }
+
 
     /*--------------------------Om os-----------------------*/
 
