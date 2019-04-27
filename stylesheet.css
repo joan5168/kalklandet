@@ -135,7 +135,6 @@ h3 {
 }
 
 
-
 .logo {
     background-image: url(billeder/logo3.svg);
     background-repeat: no-repeat;
@@ -347,6 +346,7 @@ h3 {
     height: 100vw;
     width: 95vw;
     margin-top: 10vw;
+    margin-left: 3vw;
 }
 
 #grid {
@@ -383,11 +383,15 @@ h1 {
 
 #guidede_ture {
     /*    background-color: #8bacb8;*/
+    background-color: #c6a283;
+
+
 }
 
 #undervisningsforloeb {
     /*    background-color: #8eb7c7;*/
-    background-color: #A46055;
+    background-color: #7799A6;
+
 }
 
 /*ander*/
@@ -925,8 +929,6 @@ img {
 */
 
     /*--------------------------Forside Om os-----------------------*/
-
-
     #forside_om_os {
         margin-left: 30vw;
         margin-right: 30vw;
@@ -941,7 +943,6 @@ img {
 
     /*-------------------------Besøg vores attraktioner-----------------------*/
 
-
     #grid {
 
         /*
@@ -952,8 +953,8 @@ img {
 
     /*--------indeks html mapbillede og nyheder---------*/
     .illustrator_map .mapbillede {
-        background-size: 36vw;
-        height: 35vw;
+        background-size: 45vw;
+        height: 46vw;
         width: 40vw;
         margin-left: 8vw;
         margin-top: 5vw;
@@ -974,9 +975,6 @@ img {
         padding: 3vw;
         padding-left: 7vw;
     }
-
-
-
 
 
     /*--------------------------Om os-----------------------*/

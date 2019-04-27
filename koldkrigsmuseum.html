@@ -50,10 +50,6 @@
     </header>
 
 
-
-
-
-
     <section id="introduktion">
         <div class="sectionwrapper">
             <div>
@@ -69,7 +65,6 @@
     </section>
 
     <section id="guidede_ture">
-
         <div class="overskrift">
             <h2></h2><br>
             <h2>---</h2>
@@ -80,7 +75,7 @@
                 <h3>Priser</h3>
                 <div class="pris"></div>
             </div>
-            <div class="paktiskinfo"></div>
+            <div class="praktiskInfo"></div>
         </div>
 
     </section>
@@ -177,7 +172,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="burgerMenu.js"></script>
 
 
 
@@ -190,7 +185,7 @@
 
 
 
-        // introtekst
+        // introtekst + billede
         async function getJson() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256";
             const myJson = await fetch(url);
