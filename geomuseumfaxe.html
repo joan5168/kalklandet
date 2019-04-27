@@ -59,12 +59,33 @@
         </div>
         <div class="sectionwrapper">
             <main class="indhold"></main>
-            <div class="intro_billede">
-            </div>
+            <img src="" alt="">
         </div>
     </section>
 
 
+    <section id="guidede_ture">
+        <h1>Guidet ture</h1><br>
+
+        <div class="overskrift">
+            <h2></h2><br>
+            <h2>---</h2>
+        </div>
+
+
+        <div class="sectionwrapper">
+            <main class="indhold"></main>
+            <img src="" alt="">
+            <div class="guidepriser">
+                <h3>Priser</h3>
+                <div class="pris"></div>
+            </div>
+
+            <div class="praktiskInfo"></div>
+        </div>
+
+    </section>
+    <!--
     <section id="priser">
         <div class="overskrift">
             <h2>Priser</h2>
@@ -73,21 +94,28 @@
             <main class="indhold"></main>
         </div>
     </section>
+-->
 
     <section id="undervisning">
         <div class="sectionwrapper">
             <div>
-                <h2>Undervisning</h2>
-                <h2>---</h2>
+                <h2>Undervisning tekst</h2>
                 <main class="indhold"></main>
+
             </div>
             <div>
                 <h2>Undervisningsforloeb</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, inventore minus provident! Fugiat, accusantium officiis ad beatae veritatis ducimus error consequuntur architecto labore dicta. Est vel molestiae consectetur rem ducimus.</p>
+
+                <article class="undervisningsforloeb">
+                    <main class="indhold"></main>
+                </article>
             </div>
+
         </div>
     </section>
 
+
+    <!--
     <section id="guidede_ture">
         <div class="overskrift">
             <h2>Guidede ture</h2>
@@ -96,6 +124,7 @@
             <main class="indhold"></main>
         </div>
     </section>
+-->
 
 
 
@@ -130,6 +159,87 @@
         </div>
     </footer>
     <script src="burgerMenu.js"></script>
+    <script>
+        let indhold;
+        console.log("indhold");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        // introtekst + billede + priser
+        async function getJson() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/258";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+
+            visIndhold();
+            getJson2();
+            getJson3();
+            getJson4();
+
+        }
+
+        function visIndhold() {
+            console.log("indhold");
+            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
+            document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
+            document.querySelector("#introduktion img").src = indhold.billede.guid;
+            document.querySelector("#guidede_ture img").src = indhold.fossiljagt.guid;
+
+
+            //undervisningstekst
+            document.querySelector("#undervisning .indhold").innerHTML = indhold.undervisnings_tekst;
+
+
+            //            document.querySelector("#guidede_ture .pris").innerHTML = indhold.entrepris;
+
+        }
+
+
+        async function getJson2() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/guidedeture/264";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visGuidettur();
+
+        }
+
+        // Guidede ture
+
+        function visGuidettur() {
+            console.log("indhold");
+            document.querySelector("#guidede_ture .overskrift  h2").innerHTML = indhold.title.rendered;
+            document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
+            document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
+            document.querySelector("#guidede_ture .praktiskInfo").innerHTML = indhold.praksisinfo;
+
+        }
+
+        //         Undervisnings forløb - fossil jagt
+        async function getJson3() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/320";
+
+
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visUndervisningsForloeb();
+        }
+
+        function visUndervisningsForloeb() {
+            console.log(document.querySelector(".undervisning"));
+            document.querySelector("#undervisning .undervisningsforloeb").innerHTML = indhold.title.rendered;
+        }
+    </script>
 </body>
 
 </html>
