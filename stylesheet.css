@@ -861,6 +861,22 @@ h1 {
     color: white;
 }
 
+#om_os h2 {
+    text-align: left;
+}
+
+#koldkrig {
+    margin-top: 15vw;
+}
+
+#geomuseum {
+    margin-top: 15vw;
+}
+
+#stevns {
+    margin-top: 15vw;
+}
+
 
 /*-----------MAP------------*/
 /*
@@ -878,8 +894,11 @@ h1 {
 #fungerende_map {
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
     width: 90vw;
 }
+
 
 
 .map-responsive {
@@ -1245,6 +1264,31 @@ img {
     #om_os h2 {
         color: white;
     }
+
+
+    #om_os h2 {
+        text-align: center;
+    }
+
+    #koldkrig {
+        margin-top: 0vw;
+    }
+
+    #geomuseum {
+        margin-top: 0vw;
+    }
+
+    #stevns {
+        margin-top: 0vw;
+    }
+
+    #fungerende_map {
+        margin-top: 0vw;
+        margin-bottom: 3vw;
+    }
+
+
+
 
     /*-------------------------Footer-----------------------*/
 
