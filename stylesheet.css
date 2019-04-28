@@ -370,7 +370,7 @@ h3 {
 
 @keyframes nyheds_ikon {
     from {
-        top: 67vw;
+        top: 67.5vw;
     }
 
     to {
@@ -380,7 +380,7 @@ h3 {
 
 @keyframes nyheds_ikon_home {
     from {
-        top: 37vw;
+        top: 37.5vw;
     }
 
     to {
