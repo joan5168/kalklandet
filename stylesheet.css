@@ -114,6 +114,33 @@ h3 {
     position: absolute;
 }
 
+.pil_til_forside {
+    animation-name: pil_animation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background-image: url(billeder/SVG/pil_til_forside.svg);
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    position: absolute;
+    height: 3vw;
+    width: 3vw;
+    top: 80%;
+    left: 48%;
+
+}
+
+@keyframes pil_animation {
+    from {
+        top: 45vw;
+    }
+
+    to {
+        top: 45.5vw;
+    }
+}
+
 .lillesplash {
     background-image: url(billeder/SVG/lillesplash.svg);
     background-repeat: no-repeat;
@@ -134,16 +161,17 @@ h3 {
     width: 20vw;
 }
 
+/*
 .fa-search:before {
     position: absolute;
     top: 42.5vw;
     left: 23.5vw;
     font-size: 15px;
     color: #ffffff;
-}
+}*/
 
-#top {}
 
+/*
 .search input[type=text] {
     font-family: 'limestonelight'bold;
     position: absolute;
@@ -170,6 +198,7 @@ h3 {
     font-family: 'limestonelight'bold;
     font-size: 14px;
 }
+*/
 
 .material-icons {
     position: absolute;
@@ -338,6 +367,7 @@ h3 {
     grid-area: besøg;
 }
 
+/*
 #nyheds_ikon {
     animation-name: nyheds_ikon;
     animation-duration: 0.5s;
@@ -352,7 +382,9 @@ h3 {
     top: 68.5vw;
     left: 84vw;
 }
+*/
 
+/*
 #nyheds_ikon_home {
     animation-name: nyheds_ikon_home;
     animation-duration: 0.5s;
@@ -387,6 +419,7 @@ h3 {
         top: 38vw;
     }
 }
+*/
 
 .nyheder h1 {
     font-family: 'limestoneregular';
@@ -408,7 +441,7 @@ h3 {
 
 #kasse_nyheder h1 {
     font-size: 24px;
-    color: #32383b
+    color: white;
 }
 
 .nyheder h2 {
