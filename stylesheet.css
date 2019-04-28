@@ -134,6 +134,65 @@ h3 {
     width: 20vw;
 }
 
+.fa-search:before {
+    position: absolute;
+    top: 42.5vw;
+    left: 23.5vw;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#top {}
+
+.search input[type=text] {
+    font-family: 'limestonelight'bold;
+    position: absolute;
+    top: 40vw;
+    left: 8vw;
+    width: 20vw;
+    height: 5vw;
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+.sprog p {
+    position: absolute;
+    left: 82vw;
+    top: 7vw;
+    color: white;
+    font-family: 'limestonelight'bold;
+    font-size: 14px;
+}
+
+.material-icons {
+    position: absolute;
+    left: 85vw;
+    top: 6.5vw;
+    color: white;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.search input[type=text]:hover {
+
+    color: #FF6600;
+}
 
 .logo {
     background-image: url(billeder/logo3.svg);
@@ -277,6 +336,56 @@ h3 {
 
 .planlaeg_besoeg {
     grid-area: besøg;
+}
+
+#nyheds_ikon {
+    animation-name: nyheds_ikon;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background-image: url(billeder/SVG/NEWS_icon.svg);
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 68.5vw;
+    left: 84vw;
+}
+
+#nyheds_ikon_home {
+    animation-name: nyheds_ikon_home;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background-image: url(billeder/SVG/NEWS_icon.svg);
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 68.5vw;
+    left: 84vw;
+}
+
+@keyframes nyheds_ikon {
+    from {
+        top: 67vw;
+    }
+
+    to {
+        top: 68vw;
+    }
+}
+
+@keyframes nyheds_ikon_home {
+    from {
+        top: 37vw;
+    }
+
+    to {
+        top: 38vw;
+    }
 }
 
 .nyheder h1 {
@@ -463,17 +572,27 @@ h1 {
 }
 */
 
-
 .guidepriser p {
     color: white;
 
+}
+
+#undervisning h3 {
+    color: white;
+}
+
+#undervisning p {
+    color: white;
+}
+
+#undervisning h2 {
+    margin-bottom: 5vw;
 }
 
 .guidepriser h3 {
     color: white;
     border: 2px solid white;
     padding: 2vw;
-
 }
 
 .guidepriser {
@@ -483,6 +602,11 @@ h1 {
 #guidede_ture .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.praktiskInfo p {
+    color: white;
+    margin-left: 10px;
 }
 
 #guidede_ture .overskrift {
@@ -504,10 +628,25 @@ h1 {
 #undervisningsforloeb h2 {
     padding-bottom: 1vw;
     color: white;
+
 }
 
-#undervisningsforloeb h3 {
+.undervisningstekst {
     color: white;
+}
+
+#undervisningsforloeb a {
+    color: white;
+    text-decoration: underline;
+}
+
+.undervisning img {
+    margin-top: 2vw;
+    width: 50%;
+}
+
+.undervisning h2 {
+    margin-bottom: 2vw;
 }
 
 /*------------------------------------------------ FAKTA ------------------------------------*/
@@ -537,6 +676,7 @@ h1 {
 #kalkenskulturhistorie .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+    color: white;
 }
 
 #kalkenskulturhistorie img {
@@ -557,6 +697,7 @@ h1 {
 #kalkensgeologi .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+    color: white;
 }
 
 #kalkensgeologi img {
@@ -578,6 +719,7 @@ h1 {
 #denkoldekrig .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
+    color: white;
 }
 
 #denkoldekrig img {
