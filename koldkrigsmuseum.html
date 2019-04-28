@@ -50,6 +50,8 @@
     </header>
 
 
+    <!---------------- INTRODUKTION --------------->
+
     <section id="introduktion">
         <div class="sectionwrapper">
             <div>
@@ -63,6 +65,9 @@
 
         </div>
     </section>
+
+
+    <!------------------ GUIDET TURER ------------->
 
     <section id="guidede_ture">
         <div class="overskrift">
@@ -81,24 +86,7 @@
     </section>
 
 
-    <!--
-<section id="undervisning">
-    <div class="sectionwrapper">
-        <div class="undervisninginfo">
-            <h2></h2>
-            <main class="indhold"></main>
-        </div>
-        <div class="undervisningsforloeb">
-            <h2></h2>
-            <main class="indhold"></main>
-        </div>
-    </div>
-</section>-->
-
-
-
-
-
+    <!---------------------- TEMPLAT ---------------->
     <template>
         <article class="undervisning2">
             <div class="undervisningstekst"></div>
@@ -109,6 +97,8 @@
         </article>
     </template>
 
+
+    <!----------------- UNDERVISNINGSFORLØB ------------>
 
     <section id="undervisningsforloeb">
         <div class="sectionwrapper">
@@ -237,7 +227,7 @@
 
         // Undervisnings forløb
         async function getJson3() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page8";
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page7";
             const myJson = await fetch(url);
             console.log(myJson);
 

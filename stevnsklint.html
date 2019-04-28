@@ -51,20 +51,34 @@
 
 
 
+
+
+    <!---------------- INTRODUKTION --------------->
+
     <section id="introduktion">
-        <div class="overskrift">
-            <h1>Stevns Klint</h1>
-        </div>
         <div class="sectionwrapper">
-            <main class="indhold"></main>
+            <div>
+                <h1></h1>
+                <h1>---</h1>
+                <div class="priser"></div>
+                <main class="indhold"></main>
+            </div>
             <img src="" alt="">
+
+
         </div>
     </section>
 
 
+
+
+
+    <!------------------ GUIDET TURER ------------->
+
+
+
+
     <section id="guidede_ture">
-
-
         <div class="overskrift">
             <h2></h2><br>
             <h2>---</h2>
@@ -75,60 +89,46 @@
                 <h3>Priser</h3>
                 <div class="pris"></div>
             </div>
-
             <div class="praktiskInfo"></div>
         </div>
 
     </section>
-    <!--
-    <section id="guidede_ture">
-        <div class="overskrift">
-            <h2>Guidede ture</h2>
-            <h2>---</h2>
-        </div>
+
+
+
+
+    <!---------------------- TEMPLAT ---------------->
+
+    <template>
+        <article class="undervisning2">
+            <div class="undervisningstekst"></div>
+            <div class="indhold"></div>
+            <a href="" target="_blank">
+                <h3></h3><br>
+            </a>
+        </article>
+    </template>
+
+    <!----------------- UNDERVISNINGSFORLØB ------------>
+
+    <section id="undervisningsforloeb">
         <div class="sectionwrapper">
-            <main class="indhold"></main>
-
-        </div>
-
-        <div class="guidepriser">
-            <h2>Priser</h2>
-            <div class="priser"></div>
-        </div>
-        <div class="praktiskInfo"></div>
-    </section>
--->
-
-    <!--
-    <section id="priser">
-        <div class="overskrift">
-            <h2>Priser</h2>
-            <h2>---</h2>
-            <div class="priser"></div>
-        </div>
-        <div class="sectionwrapper">
-            <p></p>
-        </div>
-    </section>
--->
-
-    <section id="undervisning">
-        <div class="sectionwrapper">
-            <div>
-                <h2>Undervisning tekst</h2>
-                <main class="indhold"></main>
-
+            <div class="undervisningsmargin">
+                <h2>Om vores undervisning</h2>
+                <h2>---</h2>
+                <div class="undervisningstekst"></div>
             </div>
-            <div>
-                <h2>Undervisningsforloeb</h2>
-
-                <article class="undervisningsforloeb">
-                    <main class="indhold"></main>
-                </article>
+            <div class="undervisning">
+                <div>
+                    <h2>Undervisningsforløb</h2><br>
+                </div>
             </div>
-
         </div>
     </section>
+
+
+
+
 
 
     <footer>
@@ -164,12 +164,22 @@
     <script src="burgerMenu.js"></script>
 
 
+
+
+
+
+
+
+
+
     <script>
         let indhold;
         console.log("indhold");
         document.addEventListener("DOMContentLoaded", getJson);
 
-        // introtekst + billede + priser
+
+
+        // introtekst + billede
         async function getJson() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/257";
             const myJson = await fetch(url);
@@ -191,12 +201,13 @@
             document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
             document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
             document.querySelector("#introduktion img").src = indhold.billede.guid;
+            document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
 
-            //undervisningstekst
-            document.querySelector("#undervisning .indhold").innerHTML = indhold.undervisnings_tekst;
+
+
         }
 
-
+        // guidede tur og priseer
         async function getJson2() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/guidedeture/263";
             const myJson = await fetch(url);
@@ -209,20 +220,18 @@
 
         }
 
-        // Guidede ture
-
         function visGuidettur() {
             console.log("indhold");
-            document.querySelector("#guidede_ture .overskrift  h2").innerHTML = indhold.title.rendered;
+            document.querySelector("#guidede_ture h2").innerHTML = indhold.title.rendered;
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
-            document.querySelector("#guidede_ture .praktiskInfo").innerHTML = indhold.praksisinfo;
 
         }
 
+
         // Undervisnings forløb
         async function getJson3() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/282";
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlbst?per_page1";
             const myJson = await fetch(url);
             console.log(myJson);
 
@@ -234,10 +243,37 @@
 
         function visUndervisningsForloeb() {
             console.log(document.querySelector(".undervisning"));
-            document.querySelector("#undervisning .undervisningsforloeb").innerHTML = indhold.title.rendered;
+            let dest = document.querySelector(".undervisning");
+            let temp = document.querySelector("template");
+            indhold.forEach(forloeb => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = forloeb.title.rendered;
+                klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id;
+                dest.appendChild(klon);
+            })
+
+        }
+
+        // undervisningstekst
+        async function getJson4() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/257";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visUndervisningstekst();
+        }
+
+        function visUndervisningstekst() {
+            console.log(document.querySelector(".undervisning"));
+            document.querySelector("#undervisningsforloeb .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
         }
     </script>
+
+
 </body>
 
 </html>

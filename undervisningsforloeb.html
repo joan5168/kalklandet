@@ -125,7 +125,7 @@
         document.addEventListener("DOMContentLoaded", start);
 
 
-
+        //KOLDKRIG
         async function start() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/" + id;
             const myJson = await fetch(url);
@@ -134,11 +134,57 @@
             console.log(forloeb);
 
             visForloeb();
+            start2();
+            start3();
+
         }
 
 
 
         function visForloeb() {
+            console.log("forloeb");
+
+            document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;
+            document.querySelector(".undervisning .indhold").innerHTML = forloeb.introtekst;
+            document.querySelector(".undervisning img").src = forloeb.billede.guid;
+
+        }
+        //STEVNS
+        async function start2() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlbst/" + id;
+            const myJson = await fetch(url);
+            forloeb = await myJson.json();
+
+            console.log(forloeb);
+
+            visForloeb2();
+        }
+
+
+
+        function visForloeb2() {
+            console.log("forloeb");
+
+            document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;
+            document.querySelector(".undervisning .indhold").innerHTML = forloeb.introtekst;
+            document.querySelector(".undervisning img").src = forloeb.billede.guid;
+
+        }
+
+        //GEOMUSEUM
+        async function start3() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlbge/" + id;
+            const myJson = await fetch(url);
+            forloeb = await myJson.json();
+
+            console.log(forloeb);
+
+            visForloeb3();
+        }
+
+
+
+        function visForloeb3() {
             console.log("forloeb");
 
             document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;

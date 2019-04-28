@@ -494,6 +494,23 @@ h1 {
     /*    background-color: #8bacb8;*/
     background-color: #c6a283;
 
+}
+
+#rundvisning {
+    /*    background-color: #8bacb8;*/
+    background-color: #c6a283;
+
+}
+
+#prismet {
+    /*    background-color: #8bacb8;*/
+    background-color: #c6a283;
+
+}
+
+#vandretur {
+    /*    background-color: #8bacb8;*/
+    background-color: #c6a283;
 
 }
 
@@ -542,6 +559,11 @@ h1 {
     color: #FF6600;
 }
 
+.undervisning {
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+}
+
 .undervisning .sectionwrapper {
     padding-top: 5vw;
 }
@@ -552,26 +574,89 @@ h1 {
 }
 
 
-/*---GUIDET TURER----*/
+/*---------GUIDET TURER-------*/
+
+/*FOSSILJAGT*/
 #guidede_ture .indhold p {
     color: white;
 }
 
-#guidede_ture .indhold {
-    /*    grid-area: indhold;*/
-}
-
-/*
-.container {
+#guidede_ture .sectionwrapper {
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-areas:
-        "overskrift guidepriser"
-        "indhold guidepriser";
+    grid-template-columns: 1fr;
 }
-*/
 
+#guidede_ture .overskrift {
+    margin-bottom: 20px;
+    /*    grid-area: overskrift;*/
+}
+
+#guidede_ture .pris {
+    margin-top: 20px;
+}
+
+/*RUNDVISNING*/
+#rundvisning .indhold p {
+    color: white;
+}
+
+
+#rundvisning .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#rundvisning .overskrift {
+    margin-bottom: 20px;
+    /*    grid-area: overskrift;*/
+}
+
+#rundvisning .pris {
+    margin-top: 20px;
+}
+
+
+/*PRISMET*/
+#prismet .indhold p {
+    color: white;
+}
+
+
+#prismet .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#prismet .overskrift {
+    margin-bottom: 20px;
+    /*    grid-area: overskrift;*/
+}
+
+#prismet .pris {
+    margin-top: 20px;
+}
+
+/*PRISMET*/
+#vandretur .indhold p {
+    color: white;
+}
+
+
+#vandretur .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#vandretur .overskrift {
+    margin-bottom: 20px;
+    /*    grid-area: overskrift;*/
+}
+
+#vandretur .pris {
+    margin-top: 20px;
+}
+
+/*GENERALT*/
 .guidepriser p {
     color: white;
 
@@ -596,27 +681,19 @@ h1 {
 }
 
 .guidepriser {
-    margin-top: 5vw;
+    margin-top: 10vw;
 }
 
-#guidede_ture .sectionwrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-}
+
 
 .praktiskInfo p {
     color: white;
     margin-left: 10px;
 }
 
-#guidede_ture .overskrift {
-    margin-bottom: 20px;
-    /*    grid-area: overskrift;*/
-}
 
-#guidede_ture .pris {
-    margin-top: 20px;
-}
+
+
 
 /*---UNDERVSINING----*/
 #undervisningsforloeb .sectionwrapper {
@@ -990,6 +1067,12 @@ img {
         margin-right: 10vw;
     }
 
+    .undervisning {
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
+    /*FOSSILJAGT*/
     #guidede_ture .sectionwrapper {
         grid-template-columns: 2fr 1fr;
     }
@@ -997,6 +1080,36 @@ img {
     #guidede_ture .indhold {
         margin-right: 10vw;
     }
+
+    /*RUNDVISNING*/
+    #rundvisning .sectionwrapper {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #rundvisning .indhold {
+        margin-right: 10vw;
+    }
+
+    /*PRISMET*/
+    #prismet .sectionwrapper {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #prismet .indhold {
+        margin-right: 10vw;
+    }
+
+    /*RUNDVISNING*/
+    #vandretur .sectionwrapper {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #vandretur .indhold {
+        margin-right: 10vw;
+    }
+
+
+    /*GENERALT*/
 
     .guidepriser {
         margin-top: 0vw;
@@ -1033,42 +1146,7 @@ img {
 
     }
 
-    /*
-    #column1 .sectionwrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 
-    #column2 .sectionwrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #column3 .sectionwrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }*/
-
-    /*
-    .dekoration_1 {
-        position: absolute;
-        width: 2px;
-        height: 10vw;
-        top: 30vw;
-        left: 5vw;
-        background-color: white;
-    }
-
-    .dekoration_2 {
-        position: absolute;
-        width: 28vw;
-        height: 2px;
-        top: 40vw;
-        left: 5vw;
-        background-color: white;
-        margin-bottom: 10px;
-    }
-*/
 
     /*--------------------------Forside Om os-----------------------*/
     #forside_om_os {
