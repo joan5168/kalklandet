@@ -1646,7 +1646,7 @@ img {
 @media screen and (min-width: 768px) {
     .nyheds_ikon {
         position: absolute;
-        left: 80vw;
+        left:80vw;
         top: 61vw;
     }
 }
@@ -1658,7 +1658,6 @@ img {
         top: 70vw;
     }
 }
-
 @media screen and (min-width: 1200px) {
     .nyheds_ikon {
         position: absolute;
@@ -1666,7 +1665,6 @@ img {
         top: 66vw;
     }
 }
-
 @media screen and (min-width: 375px) {
     .nyheds_ikon_home {
         position: absolute;
@@ -1678,11 +1676,10 @@ img {
 @media screen and (min-width: 768px) {
     .nyheds_ikon_home {
         position: absolute;
-        left: 80vw;
+        left:80vw;
         top: 38vw;
     }
 }
-
 @media screen and (min-width: 1200px) {
     .nyheds_ikon_home {
         position: absolute;
