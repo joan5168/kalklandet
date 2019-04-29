@@ -69,7 +69,7 @@
 
     <!---------------- INTRODUKTION --------------->
 
-    <section id="introduktion">
+    <section id="introduktionStevns">
         <div class="sectionwrapper">
             <div>
                 <h1></h1>
@@ -92,7 +92,7 @@
 
 
 
-    <section id="guidede_ture">
+    <section id="guidede_ture_stevns">
         <div class="overskrift">
             <h2></h2><br>
             <h2>---</h2>
@@ -212,10 +212,10 @@
 
         function visIndhold() {
             console.log("indhold");
-            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
-            document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
-            document.querySelector("#introduktion img").src = indhold.billede.guid;
-            document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
+            document.querySelector("#introduktionStevns h1").innerHTML = indhold.title.rendered;
+            document.querySelector("#introduktionStevns .indhold").innerHTML = indhold.introduktion;
+            document.querySelector("#introduktionStevns img").src = indhold.billede.guid;
+            document.querySelector("#introduktionStevns .priser").innerHTML = indhold.entrepris;
         }
 
         // guidede tur og priseer
@@ -233,9 +233,9 @@
 
         function visGuidettur() {
             console.log("indhold");
-            document.querySelector("#guidede_ture h2").innerHTML = indhold.title.rendered;
-            document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
-            document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
+            document.querySelector("#guidede_ture_stevns h2").innerHTML = indhold.title.rendered;
+            document.querySelector("#guidede_ture_stevns .indhold").innerHTML = indhold.info;
+            document.querySelector("#guidede_ture_stevns .pris").innerHTML = indhold.pris;
 
         }
 
@@ -287,6 +287,7 @@
             document.querySelector("#undervisningsforloeb .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
         }
+
     </script>
 
 
