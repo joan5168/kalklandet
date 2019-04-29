@@ -641,6 +641,32 @@ h1 {
 
 }
 
+
+/*Geomuseum Faxe introduktion*/
+#introduktionGeo .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 5vw;
+}
+
+#introduktionGeo img {
+    width: 90vw;
+    margin-top: 5vw;
+}
+
+#introduktionGeo h1 {
+    padding-bottom: 5vw;
+}
+
+#introduktionGeo .indhold {
+    padding-top: 5vw;
+}
+
+#introduktionGeo img {
+    width: 90vw;
+    margin-top: 5vw;
+}
+
 /*ander*/
 #introduktion .sectionwrapper {
     display: grid;
@@ -1182,8 +1208,21 @@ img {
 
 /*---------------tablet--------------*/
 @media screen and (min-width: 650px) {
+    /*------------Geomuseum faxe introduktion section------------*/
 
+    #introduktionGeo .sectionwrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 
+    #introduktionGeo img {
+        width: 45vw;
+        padding-left: 5vw;
+        margin-top: 5vw;
+    }
+
+    #introduktionGeo h1 {
+        padding-bottom: 2vw;
+    }
 
     /*------------ATTRAKTIONER------------*/
 
@@ -1567,7 +1606,7 @@ img {
 @media screen and (min-width: 768px) {
     .nyheds_ikon {
         position: absolute;
-        left:80vw;
+        left: 80vw;
         top: 61vw;
     }
 }
@@ -1579,6 +1618,7 @@ img {
         top: 70vw;
     }
 }
+
 @media screen and (min-width: 1200px) {
     .nyheds_ikon {
         position: absolute;
@@ -1586,6 +1626,7 @@ img {
         top: 66vw;
     }
 }
+
 @media screen and (min-width: 375px) {
     .nyheds_ikon_home {
         position: absolute;
@@ -1597,10 +1638,11 @@ img {
 @media screen and (min-width: 768px) {
     .nyheds_ikon_home {
         position: absolute;
-        left:80vw;
+        left: 80vw;
         top: 38vw;
     }
 }
+
 @media screen and (min-width: 1200px) {
     .nyheds_ikon_home {
         position: absolute;

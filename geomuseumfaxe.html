@@ -67,7 +67,7 @@
 
 
     <!---------------- INTRODUKTION --------------->
-    <section id="introduktion">
+    <section id="introduktionGeo">
         <div class="sectionwrapper">
             <div>
                 <h1></h1>
@@ -92,7 +92,10 @@
             <h2>---</h2>
         </div>
         <div class="sectionwrapper">
-            <main class="indhold"></main>
+            <article class="tekst">
+                <main class="indhold"></main>
+                <img src="" alt="">
+            </article>
             <div class="guidepriser">
                 <h3>Priser</h3>
                 <div class="pris"></div>
@@ -101,6 +104,7 @@
         </div>
 
     </section>
+
 
 
     <!--Rundvisning på Geomuseum Faxe-->
@@ -267,10 +271,12 @@
 
         function visIndhold() {
             console.log("indhold");
-            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
-            document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
-            document.querySelector("#introduktion img").src = indhold.billede.guid;
-            document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
+            document.querySelector("#introduktionGeo h1").innerHTML = indhold.title.rendered;
+            document.querySelector("#introduktionGeo .indhold").innerHTML = indhold.introduktion;
+            document.querySelector("#introduktionGeo img").src = indhold.billede.guid;
+            document.querySelector("#introduktionGeo .priser").innerHTML = indhold.entrepris;
+
+
 
 
 
@@ -297,7 +303,9 @@
             document.querySelector("#guidede_ture h2").innerHTML = indhold.title.rendered;
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
-            document.querySelector("#guidede_ture img").src = indhold.billede.guid;
+            document.querySelector("#guidede_ture .sectionwrapper .tekst img").src = indhold.billede.guid;
+
+
 
 
 
