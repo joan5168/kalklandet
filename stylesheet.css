@@ -169,13 +169,17 @@ h3 {
     color: #ffffff;
 }
 
-
+.search {
+    position: absolute;
+    left: 86vw;
+    width: 10vw;
+}
 .search input[type=text] {
     font-family: 'limestonelight'bold;
     position: absolute;
     top: 40vw;
-    left: 8vw;
-    width: 20vw;
+    left: 90vw;
+    width: 10vw;
     height: 5vw;
     float: right;
     padding: 5px;
@@ -1336,7 +1340,7 @@ img {
     .hovedmenu {
         display: block;
 
-        padding-left: 7vw;
+        padding-left: 8vw;
 
     }
 
@@ -1441,5 +1445,5 @@ img {
 
         @media screen and (min-width: 1056px) {
             .hovedmenu {
-                padding-left: 12vw;
+                padding-left: 3vw;
             }
