@@ -64,12 +64,17 @@
 
 
 
+    <section id="forside_om_os">
 
+        <h1>Om os</h1>
+        <h1>---</h1><br>
+        <main class="indhold"></main>
+    </section>
 
 
     <section id="om_os">
         <div class="overskrift">
-            <h1>Om os</h1>
+            <h1>Kontakt</h1>
             <h1>---</h1>
         </div>
         <div class="sectionwrapper">
@@ -102,7 +107,7 @@
 
     <section id="fungerende_map">
         <div class="overskift">
-            <h2>Map</h2>
+            <h2>Find vej til vores attraktioner</h2>
         </div>
 
         <!--        <div class="intro_billede"></div>-->
@@ -164,8 +169,10 @@
         console.log("indhold");
         document.addEventListener("DOMContentLoaded", getJson);
 
+
+        //om os
         async function getJson() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/om/300";
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/posts/103";
             const myJson = await fetch(url);
             console.log(myJson);
 
@@ -173,10 +180,30 @@
             console.log(indhold);
 
             visIndhold();
+            getJson2();
+
+        }
+
+        function visIndhold() {
+            console.log("indhold");
+            document.querySelector("#forside_om_os .indhold").innerHTML = indhold.content.rendered;
+
+        }
+
+        //kontaktinfo
+        async function getJson2() {
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/om/300";
+            const myJson = await fetch(url);
+            console.log(myJson);
+
+            indhold = await myJson.json();
+            console.log(indhold);
+
+            visIndhold2();
         }
 
 
-        function visIndhold() {
+        function visIndhold2() {
             console.log("vis indhold");
 
             //     østsjællandsmuseum

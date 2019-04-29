@@ -7,7 +7,7 @@
 
 body,
 html {
-    background-color: #BFB595;
+    background-color: white;
     line-height: 150%;
     height: 100%;
 }
@@ -350,16 +350,17 @@ h3 {
 
 
 #forside_om_os {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    color: #7799A6;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: #7799A6;
 }
 
 #forside_om_os h1 {
     color: white;
     font-family: 'limestoneregular';
+    text-align: center;
 }
 
 #forside_om_os p {
@@ -867,7 +868,7 @@ h1 {
 
 /*----------------------------------------------- OM OS ---------------------------------------*/
 #om_os {
-    color: #7799A6;
+    background-color: #a4c1cc;
 }
 
 #om_os h1 {
@@ -906,22 +907,22 @@ h1 {
 
 #fungerende_map h2 {
     margin-bottom: 2vw;
-    margin-left: 2vw;
 }
 
 #fungerende_map {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    width: 90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    width: 100vw;
+    background-color: #c2d8d8;
 }
 
 
 
 .map-responsive {
     overflow: hidden;
-    padding-bottom: 56.25%;
+    padding-bottom: 40vw;
     position: relative;
     height: 0;
 }
@@ -1216,10 +1217,12 @@ img {
 
     /*--------------------------Forside Om os-----------------------*/
     #forside_om_os {
-        margin-left: 30vw;
-        margin-right: 30vw;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
+        padding-left: 30vw;
+        padding-right: 30vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        margin: 0;
+
     }
 
     #forside_om_os h2 {
@@ -1299,7 +1302,7 @@ img {
 
     #fungerende_map {
         margin-top: 0vw;
-        margin-bottom: 3vw;
+
     }
 
 
