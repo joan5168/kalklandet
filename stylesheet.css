@@ -163,30 +163,35 @@ h3 {
 
 .fa-search:before {
     position: absolute;
-    top: 42.5vw;
-    left: 23.5vw;
+    top: 56.2vw;
+    left: 91vw;
     font-size: 15px;
-    color: #ffffff;
+    color: #8C8279;
 }
 
 .search {
+     font-family: 'limestonelight';
+    font-size: 1.6vw;
     position: absolute;
-    left: 86vw;
+    left: 83.5vw;
     width: 10vw;
-
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
 }
 
 .search input[type=text] {
-    font-family: 'limestonelight'bold;
+
     position: absolute;
     top: 40vw;
-    left: 90vw;
+    left: 88vw;
     width: 10vw;
     height: 5vw;
     float: right;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid white;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 12px;
