@@ -183,12 +183,13 @@ h3 {
 }
 
 #glas_lille {
-  position: absolute;
+    position: absolute;
     top: -30vw;
     left: 0vw;
     font-size: 15px;
     color: #8C8279;
 }
+
 .search_home {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -201,6 +202,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search_omos {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -213,6 +215,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search_fakta {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -225,6 +228,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search_koldkrig {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -237,6 +241,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search_geo {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -249,6 +254,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search_stevns {
     font-family: 'limestonelight';
     font-size: 1.6vw;
@@ -261,6 +267,7 @@ h3 {
     border-bottom: none;
     padding-left: 1vw;
 }
+
 .search input[type=text] {
 
     position: absolute;
@@ -481,20 +488,20 @@ h3 {
 
     background-image: url(billeder/news_icon2.svg);
     background-size: auto;
-    width: 5vw;
-    height: 5vw;
+    width: 73px;
+    height: 46px;
     background-repeat: no-repeat;
     position: absolute;
     top: 66vw;
-    left: 87vw;
+    left: 85vw;
 }
 
 .nyheds_ikon_home {
 
     background-image: url(billeder/news_icon2.svg);
     background-size: auto;
-    width: 5vw;
-    height: 5vw;
+    width: 71px;
+    height: 46px;
     background-repeat: no-repeat;
     position: absolute;
     top: 36vw;
@@ -863,7 +870,7 @@ h1 {
 .faktaoverskrift {
     padding-left: 5vw;
     padding-top: 5vw;
-    background-color: #8899b4;
+    background-color: #647284;
 }
 
 .faktaoverskrift h2 {
@@ -1533,13 +1540,71 @@ img {
         padding-left: 8vw;
 
     }
+}
 
-    @media screen and (min-width: 973px) {
-        .hovedmenu {
-            padding-left: 10vw;
-        }
+@media screen and (min-width: 973px) {
+    .hovedmenu {
+        padding-left: 10vw;
+    }
+}
 
-        @media screen and (min-width: 1056px) {
-            .hovedmenu {
-                padding-left: 3vw;
-            }
+@media screen and (min-width: 1056px) {
+    .hovedmenu {
+        padding-left: 3vw;
+    }
+}
+
+/*----------NYHEDSIKON ----------------------*/
+
+@media screen and (min-width: 375px) {
+    .nyheds_ikon {
+        position: absolute;
+        left: 70vw;
+        top: 188vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nyheds_ikon {
+        position: absolute;
+        left:80vw;
+        top: 61vw;
+    }
+}
+
+@media screen and (min-width: 885px) {
+    .nyheds_ikon {
+        position: absolute;
+        left: 80vw;
+        top: 70vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nyheds_ikon {
+        position: absolute;
+        left: 86vw;
+        top: 66vw;
+    }
+}
+@media screen and (min-width: 375px) {
+    .nyheds_ikon_home {
+        position: absolute;
+        left: 70vw;
+        top: 173vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nyheds_ikon_home {
+        position: absolute;
+        left:80vw;
+        top: 38vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nyheds_ikon_home {
+        position: absolute;
+        left: 86vw;
+        top: 36vw;
+    }
+}
