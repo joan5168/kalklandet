@@ -87,12 +87,12 @@ h3 {
 }
 
 .hovedmenu .valgt {
-    opacity: 0.7;
+    opacity: 0.8;
     color: #FF6600;
 }
 
 .hovedmenu a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     color: #FF6600;
 }
 
@@ -161,17 +161,15 @@ h3 {
     width: 20vw;
 }
 
-/*
 .fa-search:before {
     position: absolute;
     top: 42.5vw;
     left: 23.5vw;
     font-size: 15px;
     color: #ffffff;
-}*/
+}
 
 
-/*
 .search input[type=text] {
     font-family: 'limestonelight'bold;
     position: absolute;
@@ -198,7 +196,6 @@ h3 {
     font-family: 'limestonelight'bold;
     font-size: 14px;
 }
-*/
 
 .material-icons {
     position: absolute;
@@ -482,7 +479,7 @@ h3 {
 */
 
 .mapbillede {
-    background-image: url(billeder/svg/illustratormap_med_logo.svg);
+    background-image: url(billeder/svg/illustratormap_med_logo3.svg);
     background-repeat: no-repeat;
     background-size: 90vw;
     height: 100vw;
