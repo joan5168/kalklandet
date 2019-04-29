@@ -643,16 +643,22 @@ h1 {
 
 
 /*Geomuseum Faxe introduktion*/
+
+#introduktionGeo {
+    /*    background-color: #7799A6;*/
+    background-color: #7799A6;
+}
+
+#introduktionGeo p {
+    color: white;
+}
+
 #introduktionGeo .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 5vw;
 }
 
-#introduktionGeo img {
-    width: 90vw;
-    margin-top: 5vw;
-}
 
 #introduktionGeo h1 {
     padding-bottom: 5vw;
@@ -1215,9 +1221,9 @@ img {
     }
 
     #introduktionGeo img {
-        width: 45vw;
+        width: 50vw;
         padding-left: 5vw;
-        margin-top: 5vw;
+        margin-top: 39vw;
     }
 
     #introduktionGeo h1 {
@@ -1481,10 +1487,17 @@ img {
 
     .hovedmenu {
         display: block;
-
         padding-left: 8vw;
 
     }
+
+    /*-------------Geomuseum Faxe fossiljagt billede-----------*/
+
+
+    #introduktionGeo img {
+        margin-top: 29vw;
+    }
+
 
 
     /*------- indeks html - map og besøg os attraktion-------*/
@@ -1571,6 +1584,11 @@ img {
 
 }
 
+
+
+
+
+
 /*---------DESKTOP ekstra finpusning-------*/
 
 /*menu baren*/
@@ -1587,9 +1605,31 @@ img {
     }
 }
 
+/*-------------Geomuseum Faxe fossiljagt billede-----------*/
+
+@media screen and (min-width: 1002px) {
+
+
+    #introduktionGeo img {
+        margin-top: 25vw;
+    }
+}
+
+
+/*---------DESKTOP ekstra finpusning-------*/
+
+
 @media screen and (min-width: 1056px) {
     .hovedmenu {
         padding-left: 3vw;
+    }
+}
+
+/*-------------Geomuseum Faxe fossiljagt billede-----------*/
+
+@media screen and (min-width: 1172px) {
+    #introduktionGeo img {
+        margin-top: 23vw;
     }
 }
 
