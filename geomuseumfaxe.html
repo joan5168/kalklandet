@@ -274,6 +274,7 @@
 
 
 
+
         }
 
         // ********* Guidede tur og priseer ***********
@@ -296,6 +297,9 @@
             document.querySelector("#guidede_ture h2").innerHTML = indhold.title.rendered;
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
+            document.querySelector("#guidede_ture img").src = indhold.billede.guid;
+
+
 
         }
         //------ RUNDVISNING PÅ GEOMUSEUM FAXE
