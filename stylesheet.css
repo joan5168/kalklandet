@@ -169,7 +169,7 @@ h3 {
     color: #8C8279;
 }
 
-.search {
+.search_index {
     font-family: 'limestonelight';
     font-size: 1.6vw;
     position: absolute;
@@ -182,6 +182,85 @@ h3 {
     padding-left: 1vw;
 }
 
+#glas_lille {
+  position: absolute;
+    top: -30vw;
+    left: 0vw;
+    font-size: 15px;
+    color: #8C8279;
+}
+.search_home {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
+.search_omos {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
+.search_fakta {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
+.search_koldkrig {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
+.search_geo {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
+.search_stevns {
+    font-family: 'limestonelight';
+    font-size: 1.6vw;
+    position: absolute;
+    left: 83.5vw;
+    width: 10vw;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1vw;
+}
 .search input[type=text] {
 
     position: absolute;
