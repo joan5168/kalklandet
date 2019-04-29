@@ -173,7 +173,9 @@ h3 {
     position: absolute;
     left: 86vw;
     width: 10vw;
+
 }
+
 .search input[type=text] {
     font-family: 'limestonelight'bold;
     position: absolute;
@@ -770,12 +772,17 @@ h1 {
 }*/
 
 .faktaoverskrift {
-    margin-left: 5vw;
-    margin-top: 5vw;
+    padding-left: 5vw;
+    padding-top: 5vw;
+    background-color: #8899b4;
 }
 
 .faktaoverskrift h2 {
     color: white;
+}
+
+#kalkenskulturhistorie {
+    background-color: #647284;
 }
 
 #kalkenskulturhistorie .sectionwrapper {
