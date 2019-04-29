@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyhed</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--burgermenu icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -150,58 +161,6 @@
             document.querySelector(".undervisning img").src = forloeb.billede.guid;
 
         }
-
-
-
-
-
-        //STEVNS
-        async function start2() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlbst/" + id;
-            const myJson = await fetch(url);
-            forloeb = await myJson.json();
-
-            console.log(forloeb);
-
-            visForloeb2();
-        }
-
-
-
-        function visForloeb2() {
-            console.log("forloeb");
-
-            document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;
-            document.querySelector(".undervisning .indhold").innerHTML = forloeb.introtekst;
-            document.querySelector(".undervisning img").src = forloeb.billede.guid;
-
-        }
-
-
-
-
-
-        //GEOMUSEUM
-        //        async function start3() {
-        //            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlbge/" + id;
-        //            const myJson = await fetch(url);
-        //            forloeb = await myJson.json();
-        //
-        //            console.log(forloeb);
-        //
-        //            visForloeb3();
-        //        }
-        //
-        //
-        //
-        //        function visForloeb3() {
-        //            console.log("forloeb");
-        //
-        //            document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;
-        //            document.querySelector(".undervisning .indhold").innerHTML = forloeb.introtekst;
-        //            document.querySelector(".undervisning img").src = forloeb.billede.guid;
-        //
-        //        }
     </script>
 </body>
 

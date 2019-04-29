@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalklandet</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--burgermenu icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -225,9 +236,13 @@
         }
 
 
+
+
+
+
         // Undervisnings forløb
         async function getJson3() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page7";
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page15"; //Tager vi fat i alle forløbene
             const myJson = await fetch(url);
             console.log(myJson);
 
@@ -242,13 +257,24 @@
             let dest = document.querySelector(".undervisning");
             let temp = document.querySelector("template");
             indhold.forEach(forloeb => {
-                let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = forloeb.title.rendered;
-                klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id;
-                dest.appendChild(klon);
+                if (forloeb.attraktion == "koldkrig") { //i vores WP lavede vi en ekstra field under vores undervisningsforløb-pod, hvor vi tilføjede en "relationship". Vi tager kun fat i dem som har "koldkrig" som deres relationship.
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h3").innerHTML = forloeb.title.rendered;
+                    klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id;
+                    dest.appendChild(klon);
+                }
+
             })
 
         }
+
+
+
+
+
+
+
+
 
         // undervisningstekst
         async function getJson4() {
