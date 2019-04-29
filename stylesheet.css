@@ -170,7 +170,7 @@ h3 {
 }
 
 .search {
-     font-family: 'limestonelight';
+    font-family: 'limestonelight';
     font-size: 1.6vw;
     position: absolute;
     left: 83.5vw;
@@ -749,7 +749,6 @@ h1 {
 
 #undervisningsforloeb a {
     color: white;
-    text-decoration: underline;
 }
 
 .undervisning img {
@@ -759,6 +758,12 @@ h1 {
 
 .undervisning h2 {
     margin-bottom: 2vw;
+}
+
+/*---UNDERVSINING FORLØB----*/
+
+.undervisning2 h3:hover {
+    text-decoration: underline;
 }
 
 /*------------------------------------------------ FAKTA ------------------------------------*/
