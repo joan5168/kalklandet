@@ -492,8 +492,8 @@ h3 {
     height: 46px;
     background-repeat: no-repeat;
     position: absolute;
-    top: 66vw;
-    left: 85vw;
+    top: 3vw;
+    left: 70vw;
 }
 
 .nyheds_ikon_home {
@@ -504,8 +504,8 @@ h3 {
     height: 46px;
     background-repeat: no-repeat;
     position: absolute;
-    top: 36vw;
-    left: 87vw;
+    top: 3vw;
+    left: 70vw;
 }
 
 
@@ -525,6 +525,7 @@ h3 {
     border: 2px solid white;
     margin-right: 6vw;
     margin-left: 6vw;
+    position: relative;
 }
 
 #kasse_nyheder h1 {
@@ -1211,7 +1212,7 @@ footer img {
 }*/
 
 
-/*----------------------------------------SINGLE VIEW-------------------------------------*/
+/*----------------------------------------SINGLE VIEW NYHEDER-------------------------------------*/
 
 .nyhed h1 {
     padding-bottom: 3vw;
@@ -1231,6 +1232,48 @@ footer img {
 
 img {
     width: 40vw;
+}
+
+
+
+
+/*-------------------------------------SINGLE VIEW UNDERVISNINGSFORLØB-------------------------------------*/
+
+#singleView {
+    background-color: #647284;
+    padding-right: 20vw;
+    padding-left: 20vw;
+}
+
+#singleView p {
+    color: white;
+}
+
+#singleView h1 {
+    color: white;
+    font-size: 2.5vw;
+}
+
+#singleView h2 {
+    color: white;
+    font-size: 2vw;
+}
+
+#singleView h3 {
+    color: white;
+}
+
+
+#singleView li {
+    color: white;
+}
+
+#singleView a {
+    color: #ffa142;
+}
+
+#singleView div {
+    color: white;
 }
 
 
@@ -1463,6 +1506,16 @@ img {
 
     #kasse_nyheder h1 {
         font-size: 22px;
+    }
+
+    .nyheds_ikon {
+        top: 2vw;
+        left: 22vw;
+    }
+
+    .nyheds_ikon_home {
+        top: 2vw;
+        left: 22vw;
     }
 
     .illustrator_map h2 {
@@ -1724,59 +1777,3 @@ img {
 }
 
 /*----------NYHEDSIKON ----------------------*/
-
-@media screen and (min-width: 375px) {
-    .nyheds_ikon {
-        position: absolute;
-        left: 70vw;
-        top: 188vw;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .nyheds_ikon {
-        position: absolute;
-        left: 80vw;
-        top: 61vw;
-    }
-}
-
-@media screen and (min-width: 885px) {
-    .nyheds_ikon {
-        position: absolute;
-        left: 80vw;
-        top: 70vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .nyheds_ikon {
-        position: absolute;
-        left: 86vw;
-        top: 66vw;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    .nyheds_ikon_home {
-        position: absolute;
-        left: 70vw;
-        top: 173vw;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .nyheds_ikon_home {
-        position: absolute;
-        left: 80vw;
-        top: 38vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .nyheds_ikon_home {
-        position: absolute;
-        left: 86vw;
-        top: 36vw;
-    }
-}
