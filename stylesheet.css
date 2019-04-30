@@ -608,6 +608,10 @@ h1 {
     background-color: #A67E5B;
 }
 
+#introduktion h3 {
+    color: white;
+}
+
 #introduktion p {
     color: white;
 }
@@ -663,6 +667,10 @@ h1 {
     color: white;
 }
 
+#introduktionStevns h3 {
+    color: white;
+}
+
 #introduktionStevns .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -692,6 +700,10 @@ h1 {
 }
 
 #introduktionGeo p {
+    color: white;
+}
+
+#introduktionGeo h3 {
     color: white;
 }
 
