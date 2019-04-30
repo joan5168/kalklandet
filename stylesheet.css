@@ -657,6 +657,10 @@ h1 {
 
 }
 
+#undervisningsforloeb_stevns {
+    background-color: #c6a283;
+}
+
 /*Stevns Klint introduktion*/
 
 #introduktionStevns {
@@ -776,6 +780,11 @@ h1 {
 }
 
 #undervisningsforloeb .undervisning {
+    border: 2px solid white;
+    padding: 3vw;
+}
+
+#undervisningsforloeb_stevns .undervisning {
     border: 2px solid white;
     padding: 3vw;
 }
@@ -920,7 +929,31 @@ h1 {
     margin-left: 10px;
 }
 
+
 /*---UNDERVSINING----*/
+
+/* Stevns Klin*/
+#undervisningsforloeb_stevns .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 5vw;
+}
+
+#undervisningsforloeb_stevns h2 {
+    padding-bottom: 1vw;
+    color: white;
+
+}
+
+.undervisningstekst_stevns {
+    color: white;
+}
+
+#undervisningsforloeb_stevns a {
+    color: white;
+}
+
+
 #undervisningsforloeb .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -1465,6 +1498,12 @@ footer img {
 
 
     #undervisningsforloeb .sectionwrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /*Stevns klint*/
+    #undervisningsforloeb_stevns .sectionwrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
