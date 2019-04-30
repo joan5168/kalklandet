@@ -658,7 +658,7 @@ h1 {
 }
 
 #undervisningsforloeb_stevns {
-    background-color: #c6a283;
+    background-color: #8bacb8;
 }
 
 /*Stevns Klint introduktion*/
@@ -793,7 +793,7 @@ h1 {
 
 /*Stevns Klint guidet turer*/
 #guidede_ture_stevns {
-    background-color: #95B3BF;
+    background-color: #c6a283;
 }
 
 #guidede_ture_stevns .indhold p {
@@ -961,7 +961,7 @@ h1 {
 }
 
 #undervisningsforloeb h2 {
-    padding-bottom: 1vw;
+    padding-bottom: 5vw;
     color: white;
 
 }
@@ -1459,8 +1459,9 @@ footer img {
     }
 
     #guidede_ture img {
-        width: 40vw;
-        padding-top: 2vw;
+        width: 43vw;
+        padding-top: 3vw;
+
     }
 
     /*RUNDVISNING*/
