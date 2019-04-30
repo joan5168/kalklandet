@@ -624,6 +624,11 @@ h1 {
 
 }
 
+#guidede_ture img {
+    width: 80vw;
+    padding-top: 5vw;
+}
+
 #rundvisning {
     background-color: #8bacb8;
 
@@ -1216,23 +1221,34 @@ footer img {
 
 .nyhed h1 {
     padding-bottom: 3vw;
+    color: white;
 }
 
 
 .nyhed h2 {
     padding-bottom: 2vw;
+    color: white;
+}
+
+.nyhed p {
+    color: white;
 }
 
 .nyhed .sectionwrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-.indhold {}
+.nyhed {
+    background-color: #647284;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
 
-img {
+.nyhed img {
     width: 40vw;
 }
+
 
 
 
@@ -1241,8 +1257,8 @@ img {
 
 #singleView {
     background-color: #647284;
-    padding-right: 20vw;
-    padding-left: 20vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
 }
 
 #singleView p {
@@ -1251,12 +1267,10 @@ img {
 
 #singleView h1 {
     color: white;
-    font-size: 2.5vw;
 }
 
 #singleView h2 {
     color: white;
-    font-size: 2vw;
 }
 
 #singleView h3 {
@@ -1396,6 +1410,11 @@ img {
 
     #guidede_ture .indhold {
         margin-right: 10vw;
+    }
+
+    #guidede_ture img {
+        width: 40vw;
+        padding-top: 2vw;
     }
 
     /*RUNDVISNING*/
@@ -1723,6 +1742,17 @@ img {
 
     #instagram:hover {
         width: 2.8vw;
+    }
+
+    /*singleview*/
+    .nyhed {
+        padding-right: 20vw;
+        padding-left: 20vw;
+    }
+
+    #singeView {
+        padding-right: 20vw;
+        padding-left: 20vw;
     }
 
 }
