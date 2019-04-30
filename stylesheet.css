@@ -700,7 +700,6 @@ h1 {
 
 #introduktionGeo {
     background-color: #8C8279;
-    ;
 }
 
 #introduktionGeo p {
@@ -1010,11 +1009,13 @@ h1 {
 .faktaoverskrift {
     padding-left: 5vw;
     padding-top: 5vw;
+
     background-color: #647284;
 }
 
 .faktaoverskrift h2 {
     color: white;
+    padding-bottom: 2vw;
 }
 
 #kalkenskulturhistorie {
