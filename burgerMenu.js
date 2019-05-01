@@ -9,7 +9,8 @@ function myFunction() {
 }
 
 window.onscroll = function () {
-    stickyFunction()
+    stickyFunction();
+    scrollFunction();
 };
 
 var header = document.getElementById("myBurgermenu");
@@ -31,9 +32,6 @@ function closeFunction(x) {
 
 // GO TO TOP
 // Når du ruller 20px fra the toppen af dokumentet, vis button
-window.onscroll = function () {
-    scrollFunction()
-}
 
 function scrollFunction() {
     console.log("scroll function");

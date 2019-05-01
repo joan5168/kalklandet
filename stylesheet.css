@@ -76,11 +76,11 @@ h3 {
 #myBtn {
     display: none;
     position: fixed;
-    bottom: 30px;
+    bottom: 1vw;
     border: none;
-    right: 30px;
+    right: 1vw;
     z-index: 2;
-    background-image: url(billeder/SVG/button.svg);
+    background-image: url(billeder/SVG/button_one.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 52px;
@@ -89,12 +89,13 @@ h3 {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0.7;
 
 }
 
 #myBtn:hover {
-    background-image: url(billeder/SVG/button.svg;
+    background-image: url(billeder/SVG/button_one.svg);
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -437,7 +438,7 @@ h3 {
 }
 
 .burgermenu a.icon {
-    background: #000000;
+    background: #50463e;
     display: block;
     position: absolute;
     right: 0;
@@ -446,13 +447,13 @@ h3 {
 
 
 .burgermenu a:hover {
-    background-color: #BFB595;
-    color: white;
+/*    background-color: white;*/
+    color: #ff8838;
 }
 
 .burgermenu .active {
-    background-color: #8C8279;
-    color: white;
+    background-color: white;
+    color: #8C8279;
 
 }
 
@@ -464,7 +465,7 @@ h3 {
 */
 
 .burgermenu a.icon:hover {
-    background-color: black;
+    background-color: #50463e;
 }
 
 .sticky {
@@ -1212,7 +1213,7 @@ h1 {
 
 /*----------------------------------------------- FOOTER --------------------------------------*/
 footer {
-    background-color: white;
+    background-color: #f0f0f0;
     display: grid;
     grid-template-columns: 1fr;
 }
