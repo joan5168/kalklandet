@@ -373,7 +373,7 @@ h3 {
 
 .burgermenu {
     overflow: hidden;
-    background-color: #A67E5B;
+    background-color: #8C8279;
     position: relative;
     width: 100vw;
     top: 0vw;
@@ -396,7 +396,7 @@ h3 {
 }
 
 .burgermenu a.icon {
-    background: #FF6600;
+    background: #000000;
     display: block;
     position: absolute;
     right: 0;
@@ -405,12 +405,12 @@ h3 {
 
 
 .burgermenu a:hover {
-    background-color: #FF6600;
+    background-color: #BFB595;
     color: white;
 }
 
 .burgermenu .active {
-    background-color: #FF6600;
+    background-color: #8C8279;
     color: white;
 
 }
@@ -423,7 +423,7 @@ h3 {
 */
 
 .burgermenu a.icon:hover {
-    background-color: #FF6600;
+    background-color: black;
 }
 
 .sticky {
