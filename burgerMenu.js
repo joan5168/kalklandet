@@ -1,3 +1,4 @@
+// BURGER MENU
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -24,4 +25,27 @@ function stickyFunction() {
 
 function closeFunction(x) {
     x.classList.toggle("change");
+}
+
+
+
+// GO TO TOP
+// Når du ruller 20px fra the toppen af dokumentet, vis button
+window.onscroll = function () {
+    scrollFunction()
+}
+
+function scrollFunction() {
+    console.log("scroll function");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// Når du klikker på button, rul til toppen af siden
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

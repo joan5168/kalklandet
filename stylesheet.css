@@ -65,6 +65,47 @@ h3 {
     font-family: 'limestonelight';
 }
 
+
+
+
+
+
+
+/*-----------------------GO TO TOP-----------------------*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    border: none;
+    right: 30px;
+    z-index: 2;
+    background-image: url(billeder/SVG/button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+
+}
+
+#myBtn:hover {
+    background-image: url(billeder/SVG/button.svg;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 52px;
+    transform: scale(1.1);
+    opacity: 0.7;
+
+    width: 50px;
+    height: 50px;
+}
+
 /*-----------------------Splash-----------------------*/
 
 .hovedmenu {
@@ -120,7 +161,7 @@ h3 {
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    background-image: url(billeder/SVG/pil_til_forside.svg);
+    background-image: url(billeder/SVG/pil_til_forside_tyk.svg);
     background-repeat: no-repeat;
     background-size: 3vw;
     position: absolute;
