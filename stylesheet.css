@@ -959,13 +959,13 @@ h1 {
 
 .guidepriser h3 {
     color: white;
-        border: 2px solid white;
+    border: 2px solid white;
     padding: 2vw;
 }
 
 .guidepriser {
     margin-top: 10vw;
-/*
+    /*
     border: 2px solid white;
     padding: 2vw;
 */
@@ -1854,7 +1854,7 @@ footer img {
         padding-left: 20vw;
     }
 
-    #singeView {
+    #singleView {
         padding-right: 20vw;
         padding-left: 20vw;
     }
