@@ -691,7 +691,7 @@ h1 {
 
 #vandretur {
     /*    background-color: #8bacb8;*/
-    background-color: rgba(214, 97, 62, 0.86);
+    background-color: #8C8279;
 
 }
 
@@ -959,12 +959,16 @@ h1 {
 
 .guidepriser h3 {
     color: white;
-    border: 2px solid white;
+        border: 2px solid white;
     padding: 2vw;
 }
 
 .guidepriser {
     margin-top: 10vw;
+/*
+    border: 2px solid white;
+    padding: 2vw;
+*/
 }
 
 .praktiskInfo p {
@@ -983,7 +987,6 @@ h1 {
 }
 
 #undervisningsforloeb_stevns h2 {
-    padding-bottom: 1vw;
     color: white;
 
 }
@@ -1005,7 +1008,6 @@ h1 {
 }
 
 #undervisningsforloeb h2 {
-    padding-bottom: 5vw;
     color: white;
 
 }
@@ -1085,6 +1087,10 @@ h1 {
 #kalkenskulturhistorie .indhold {
     margin-top: 5vw;
 
+}
+
+#kalkenskulturhistorie .overskrift {
+    padding-top: 0;
 }
 
 #kalkensgeologi .sectionwrapper {
@@ -1227,7 +1233,8 @@ footer h3 {
 
 footer h4 {
     padding-top: 1vw;
-    color:
+    color: black;
+
 }
 
 footer p {
