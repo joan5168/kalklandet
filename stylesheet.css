@@ -698,7 +698,18 @@ h1 {
 #undervisningsforloeb {
     /*    background-color: #8eb7c7;*/
     background-color: #7799A6;
+    ´
+}
 
+.bog_ikon {
+    background-image: url(billeder/undervisning_ikon.svg);
+    background-size: contain;
+    width: 73px;
+    height: 46px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2vw;
+    left: 80%;
 }
 
 #undervisningsforloeb_stevns {
@@ -825,6 +836,7 @@ h1 {
 #undervisningsforloeb .undervisning {
     border: 2px solid white;
     padding: 3vw;
+    position: relative;
 }
 
 #undervisningsforloeb_stevns .undervisning {
@@ -1422,6 +1434,12 @@ footer img {
 }
 
 
+@media screen and (max-width: 650px) {
+    .bog_ikon {
+        display: block;
+    }
+}
+
 
 /*---------------tablet--------------*/
 @media screen and (min-width: 650px) {
@@ -1547,6 +1565,10 @@ footer img {
 
     .guidepriser {
         margin-top: 0vw;
+    }
+
+    .bog_ikon {
+        display: none;
     }
 
 
@@ -1880,6 +1902,10 @@ footer img {
     .hovedmenu {
         padding-left: 10vw;
     }
+
+    .bog_ikon {
+        display: block;
+    }
 }
 
 /*-------------Geomuseum Faxe fossiljagt billede-----------*/
@@ -1909,5 +1935,3 @@ footer img {
         margin-top: 23vw;
     }
 }
-
-/*----------NYHEDSIKON ----------------------*/
