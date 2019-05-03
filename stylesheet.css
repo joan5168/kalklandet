@@ -1768,7 +1768,7 @@ footer img {
 
     .hovedmenu {
         display: block;
-        padding-left: 8vw;
+        padding-left: 0vw;
 
     }
 
@@ -1786,7 +1786,7 @@ footer img {
 
 
     #introduktionGeo img {
-        margin-top: 29vw;
+        margin-top: 65vw;
     }
 
 
@@ -1896,14 +1896,14 @@ footer img {
 /*menu baren*/
 @media screen and (min-width: 916px) {
     .hovedmenu {
-        padding-left: 8vw;
+        padding-left: 3vw;
 
     }
 }
 
 @media screen and (min-width: 973px) {
     .hovedmenu {
-        padding-left: 10vw;
+        padding-left: 3vw;
     }
 
     .bog_ikon {
@@ -1923,7 +1923,6 @@ footer img {
 
 
 /*---------DESKTOP ekstra finpusning-------*/
-
 
 @media screen and (min-width: 1056px) {
     .hovedmenu {
