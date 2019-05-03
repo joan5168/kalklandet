@@ -205,7 +205,7 @@
             indhold = await myJson.json();
             console.log(indhold);
 
-            visIndhold();
+            visIndhold(); //vi kalder på visIndhold funktionen
         }
 
         function visIndhold() {
@@ -215,7 +215,7 @@
             document.querySelector("#kalkenskulturhistorie .overskrift h2").innerHTML = indhold.titlekalkenskulturhistorie;
             document.querySelector("#kalkenskulturhistorie img").src = indhold.billedekalkenskulturhistorie.guid;
             document.querySelector("#kalkenskulturhistorie .indhold").innerHTML = indhold.kalkenskulturhistorie;
-            console.log(indhold.kalkenskulturhistorie);
+            console.log(indhold.kalkenskulturhistorie); // vi tager fat i overskriften som har titlen kalkenskulturhistorie. Vi tager fat i billedet med titlen kalkenskulturhistorie, guid betyder at det er et billede. Til sidst tager vi fat i indholdet med titlen kalkenskulturhistorie.
 
             //            Kalkens Geologi
             document.querySelector("#kalkensgeologi .overskrift h2").innerHTML = indhold.titlekalkensgeologi;
