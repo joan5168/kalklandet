@@ -38,46 +38,50 @@
 
         <div class="lillesplash">
             <a href="index.html">
+                <!--  logoet linker til html siden "index.html"-->
                 <div class="lillelogo"></div>
             </a>
-            <div class="lillesprog"></div>
+            <div class="lillesprog"></div> <!-- Sprog-knap, dog uden funktion endnu -->
         </div>
 
         <nav class="hovedmenu">
+            <!-- Navigationsmenu -->
             <a href="home.html">Home</a>
             <a href="koldkrigsmuseum.html" class="valgt">Koldkrigsmuseum Stevnsfort</a>
             <a href="stevnsklint.html">Stevns Klint</a>
             <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
             <a href="fakta.html">Fakta</a>
             <a href="omos.html">Om os</a>
-            <a href=""></a><input type="text" placeholder="Search.." class="search_koldkrig"><i class="fa fa-search" id="glas_lille"></i>
+            <a href=""></a><input type="text" placeholder="Search.." class="search_koldkrig"><i class="fa fa-search" id="glas_lille"></i> <!-- Søgefelt, uden funktion -->
         </nav>
 
 
 
         <div class="container" class="hidden">
+            <!-- burger menuen har class: hidden, da den kun skal være vidst til mobil -->
 
             <div class="burgermenu" id="myBurgermenu">
                 <a href="index.html" class="active">Koldkrigsmuseum Stevnsfort</a>
 
                 <div id="myLinks">
+
                     <a href="index.html">Home</a>
                     <a href="koldkrigsmuseum.html">Koldkrigsmuseum Faxe</a>
                     <a href="stevnsklint.html">Stevnsklint</a>
                     <a href="geomuseumfaxe.html">Geomuseum Faxe</a>
                     <a href="fakta.html">Fakta</a>
                     <a href="omos.html">Om Os</a>
-                </div>
+                </div> <!-- Indholdet af burgermenuen, der med <a href> linker til de forksellige html sites-->
 
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                </a>
+                </a> <!-- Burgermenu icon -->
             </div>
         </div>
     </header>
 
-    <!-- go to top -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button> <!-- En "go-to-top" knap. Dens tilhørende funktion ligger under javascript -->
 
 
     <!---------------- INTRODUKTION --------------->
@@ -86,11 +90,13 @@
         <div class="sectionwrapper">
             <div>
                 <h1></h1>
-                <h1>---</h1>
+                <!--WP indhold for overskrift indsættes her -->
+                <h1>---</h1> <!-- dekoration -->
                 <div class="priser"></div>
-                <main class="indhold"></main>
+                <!--WP indhold for priser indsættes her-->
+                <main class="indhold"></main> <!-- WP indhold indsættes her -->
             </div>
-            <img src="" alt="koldkrigsmuseum stevnsfort - guidet tur">
+            <img src="" alt="koldkrigsmuseum stevnsfort - guidet tur"> <!-- WP billede indsættes -->
 
 
         </div>
@@ -176,10 +182,12 @@
 
         <div class="icons">
             <a href="https://www.facebook.com/stevnsklint/" target="_blank">
+                <!--Facebook ikon der linker til url-->
                 <img src="billeder/facebookLogo.png" alt="facebook" id="facebook">
             </a>
 
             <a href="https://www.instagram.com/oestsjaellandsmuseum/" target="_blank">
+                <!--Instagram ikon der linker til url-->
                 <img src="billeder/instagramLogo.png" alt="instagram" id="instagram">
             </a>
         </div>
@@ -201,41 +209,35 @@
 
 
     <script>
-        let indhold;
+        let indhold; // Variabel
         console.log("indhold");
-        document.addEventListener("DOMContentLoaded", getJson);
-
+        document.addEventListener("DOMContentLoaded", getJson); // programmet går igang når DOM er loaded.
 
 
         // introtekst + billede
         async function getJson() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256";
-            const myJson = await fetch(url);
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256"; //tager fat JSON-filen
+            const myJson = await fetch(url); //Henter indholdet fra JSON-filen
             console.log(myJson);
 
-            indhold = await myJson.json();
+            indhold = await myJson.json(); //placerer indholdet i "indhold" variablen
             console.log(indhold);
 
-
-            visIndhold();
-            getJson2();
-            getJson3();
-            getJson4();
-
+            visIndhold(); //kalder på visIndhold funktion.
+            getJson2(); //kalder på getJson2 funktion.
+            getJson3(); //kalder på getJson3 funktion.
+            getJson4(); //kalder på getJson4 funktion.
         }
 
         function visIndhold() {
             console.log("indhold");
-            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered;
+            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered; //vælger h1 i id'et "introduktion" og placerer title.rendered fra JSON filen.
             document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
             document.querySelector("#introduktion img").src = indhold.billede.guid;
             document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
 
+        } //placering af indhold fra JSON fil i html.
 
-
-        }
-
-        // guidede tur og priseer
         async function getJson2() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/guidedeture/261";
             const myJson = await fetch(url);
@@ -246,7 +248,7 @@
 
             visGuidettur();
 
-        }
+        } // henter guidede tur og priser fra WP JSON fil **ligesom i funktion getJson()**
 
         function visGuidettur() {
             console.log("indhold");
@@ -254,14 +256,8 @@
             document.querySelector("#guidede_ture .indhold").innerHTML = indhold.info;
             document.querySelector("#guidede_ture .pris").innerHTML = indhold.pris;
 
-        }
+        } //placering af indhold (priser og guidede turer) fra JSON fil i html **ligesom i funktion visIndhold**
 
-
-
-
-
-
-        // Undervisnings forløb
         async function getJson3() {
             const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb?per_page15"; //Tager vi fat i alle forløbene
             const myJson = await fetch(url);
@@ -270,31 +266,22 @@
             indhold = await myJson.json();
             console.log(indhold);
 
-            visUndervisningsForloeb();
-        }
+            visUndervisningsForloeb(); //Kalder på visUndervisningsForloeb funktion.
+        } //henter undervisningsforløb fra WP JSON fil
 
         function visUndervisningsForloeb() {
             console.log(document.querySelector(".undervisning"));
-            let dest = document.querySelector(".undervisning");
-            let temp = document.querySelector("template");
-            indhold.forEach(forloeb => {
-                if (forloeb.attraktion == "koldkrig") { //i vores WP lavede vi en ekstra field under vores undervisningsforløb-pod, hvor vi tilføjede en "relationship". Vi tager kun fat i dem som har "koldkrig" som deres relationship.
-                    let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h3").innerHTML = forloeb.title.rendered;
-                    klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id;
+            let dest = document.querySelector(".undervisning"); //.undervisning, den tomme kasse
+            let temp = document.querySelector("template"); //variabel der tager fat i html template
+            indhold.forEach(forloeb => { //for hvert forløb skal der:
+                if (forloeb.attraktion == "koldkrig") { //i vores WP lavede vi en ekstra field under vores undervisningsforløbs-pod, hvor vi tilføjede en "relationship". Her tager vi kun fat i dem som har "koldkrig" som deres relationship.
+                    let klon = temp.cloneNode(true).content; // vi kloner templaten og tilføjer indholdet
+                    klon.querySelector("h3").innerHTML = forloeb.title.rendered; //title.rendered placeret i h3 i html
+                    klon.querySelector("a").href = "undervisningsforloeb.html" + "?" + "id=" + forloeb.id; //a href kalder på id fra undervisningsforløb og åbner nyt vindue (html koden har target="_blank").
                     dest.appendChild(klon);
                 }
-
             })
-
         }
-
-
-
-
-
-
-
 
 
         // undervisningstekst
@@ -307,13 +294,17 @@
             console.log(indhold);
 
             visUndervisningstekst();
-        }
+        } //henter undervisningstekst fra WP JSON fil
 
         function visUndervisningstekst() {
             console.log(document.querySelector(".undervisning"));
             document.querySelector("#undervisningsforloeb .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
 
+<<<<<<< HEAD
         }
+=======
+        } //placering af indhold fra JSON fil i html
+>>>>>>> orgin/master
 
     </script>
 </body>
