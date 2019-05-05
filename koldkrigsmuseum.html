@@ -234,8 +234,9 @@
 
         function visIndhold() {
             console.log("indhold");
-            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered; //vælger h1 i id'et "introduktion" og placerer title.rendered fra JSON filen.
+            document.querySelector("#introduktion h1").innerHTML = indhold.title.rendered; //vælger h1 som ligger i id'et "introduktion" og placerer title.rendered fra JSON filen.
             document.querySelector("#introduktion .indhold").innerHTML = indhold.introduktion;
+            // her finder den img under id'et introduktion i html,  vi skriver src så det ved det er et billede vi skal hente, variablen indhold har alt dataen, derfor skriver indhold og billede. guid fordi det er sådan strukturen er i WP JSON
             document.querySelector("#introduktion img").src = indhold.billede.guid;
             document.querySelector("#introduktion .priser").innerHTML = indhold.entrepris;
 
