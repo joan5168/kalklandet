@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" alt="kalklandet logo">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" alt="kalklandet logo">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" alt="kalklandet logo">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" alt="kalklandet logo">
     <link rel="manifest" href="favicon/site.webmanifest">
@@ -86,10 +86,11 @@
                 <h1>Undervisnings Forløb</h1>
             </div>
             <div class="sectionwrapper">
+                <!-- sectionwrapper, som sørger for at vi i CSS'en kan give en fast stuktur i vores design -->
 
                 <h2></h2>
-                <div class="indhold"></div>
-                <img src="" alt="billedet tilpasset til tekst">
+                <div class="indhold"></div> <!-- denne kasse placerer javascripten indhold i -->
+                <img src="" alt="billedet tilpasset til tekst"> <!-- img tag, som javascripten sørger for at placerer indhold i-->
             </div>
         </main>
     </section>
@@ -141,8 +142,8 @@
 
 
     <script>
-        let urlParams = new URLSearchParams(window.location.search); //viser et nyt vindue
-        let id = urlParams.get("id");
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id"); // let variabel, som tager fat i id
         console.log(id);
 
         document.addEventListener("DOMContentLoaded", start);
@@ -153,26 +154,27 @@
 
         //KOLDKRIG
         async function start() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/" + id;
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/undervisningsforlb/" + id; //her specificerer vi hvilket undervisningsforløbs indhold, der skal vises ved at tilføje "+ id"
             const myJson = await fetch(url);
             forloeb = await myJson.json();
 
             console.log(forloeb);
 
-            visForloeb();
-            start2();
-            start3();
+            visForloeb(); //kalder på visForloeb funktion
+            start2(); // kalder funktion
+            start3(); //kalder funktion
 
         }
 
         function visForloeb() {
             console.log("forloeb");
-
+            //tager fat i html elementerne og placeret JSON indholdet.
             document.querySelector(".undervisning h2").innerHTML = forloeb.title.rendered;
             document.querySelector(".undervisning .indhold").innerHTML = forloeb.introtekst;
             document.querySelector(".undervisning img").src = forloeb.billede.guid;
 
         }
+
     </script>
 </body>
 

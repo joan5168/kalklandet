@@ -12,6 +12,7 @@ html {
     line-height: 150%;
     height: 100%;
     scroll-behavior: smooth;
+    /*gør at vores site ikke hopper op og ned ved klik på links, men stedet scroller smooth*/
 }
 
 @font-face {
@@ -160,14 +161,18 @@ h3 {
 
 .pil_til_forside {
     animation-name: pil_animation;
+    /*kalder på animation-keyframe'ens navn*/
     animation-duration: 0.5s;
+    /* hvor længe den skal vare*/
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
+    /* hvor mange gange? */
     animation-direction: alternate-reverse;
     background-image: url(billeder/SVG/pil_til_forside_tyk.svg);
     background-repeat: no-repeat;
     background-size: 3vw;
     position: absolute;
+    /* oven på parent elementet*/
     height: 3vw;
     width: 3vw;
     top: 80%;
@@ -176,6 +181,8 @@ h3 {
 }
 
 @keyframes pil_animation {
+
+    /* animationens keyframes  - fra og til */
     from {
         top: 45vw;
     }
@@ -417,22 +424,28 @@ h3 {
 
 .burgermenu {
     overflow: hidden;
+    /* skal som udgangspunkt have overflow:hidden */
     background-color: #8C8279;
     position: relative;
     width: 100vw;
+    /* skal fylde hele vinduets bredde */
     top: 0vw;
     opacity: 0.8;
     z-index: 10;
+    /* skal ligge øverst */
 }
 
 .burgermenu #myLinks {
     display: none;
+    /* linksene skal som udgangspunkt ikke vises */
 }
 
 .burgermenu a {
     cursor: pointer;
+    /* pointer på link, som gør det tydeligt klikbart */
     color: white;
     padding: 14px 16px;
+    /* pladsen rundt om linksene*/
     text-decoration: none;
     font-size: 20px;
     display: block;
@@ -732,8 +745,10 @@ h1 {
 }
 
 #introduktionStevns .sectionwrapper {
+    /* mobil */
     display: grid;
     grid-template-columns: 1fr;
+    /* skal ligge med kun ét element på langs. de andre elementer ligger sig under hinanden */
     padding-top: 5vw;
 }
 
@@ -1290,42 +1305,7 @@ footer img {
     margin-left: 2vw;
 }
 
-/*------------------------------------------ SOCIAL MEDIA ICONS -------------------------------------*/
-/*
-.fa-facebook-f:before,
-.fa-facebook:before {
-    content: "\f09a";
-    font-size: 25px;
-}
 
-.fa-instagram-f:before,
-.fa-instagram:before {
-    content: "\f09a";
-    font-size: 25px;
-    margin-left: -4px;
-}
-
-.fa {
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #FF6600;
-    color: white;
-}
-
-.fa-instagram {
-    background: #FF6600;
-    color: white;
-}*/
 
 
 /*----------------------------------------SINGLE VIEW NYHEDER-------------------------------------*/
