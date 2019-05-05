@@ -8,6 +8,8 @@ function myFunction() {
     }
 }
 
+
+
 window.onscroll = function () {
     stickyFunction();
     scrollFunction();
@@ -16,11 +18,12 @@ window.onscroll = function () {
 var header = document.getElementById("myBurgermenu");
 var sticky = header.offsetTop;
 
+// denne funktion stickyFunction er tager fra w3schools. https://www.w3schools.com/howto/howto_js_sticky_header.asp. Vi har brugt den til at lave vores burger menu sticky.
 function stickyFunction() {
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset > sticky) { //når YOffset er større end sticky, skal den tilføje class sticky
         header.classList.add("sticky");
     } else {
-        header.classList.remove("sticky");
+        header.classList.remove("sticky"); // ellers skal den fjernes
     }
 }
 
@@ -31,13 +34,14 @@ function closeFunction(x) {
 
 
 // GO TO TOP
-// Når du ruller 20px fra the toppen af dokumentet, vis button
+
+
 
 function scrollFunction() {
     console.log("scroll function");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { // Når du scroller 20px fra the toppen af dokumentet, vis button
         document.getElementById("myBtn").style.display = "block";
-    } else {
+    } else { //ellers ikke vis button
         document.getElementById("myBtn").style.display = "none";
     }
 }
