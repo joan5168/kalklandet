@@ -214,7 +214,7 @@
             indhold.forEach(nyhed => {
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = nyhed.title.rendered;
-                klon.querySelector("a").href = "nyhedersingleview.html" + "?" + "id=" + nyhed.id; // vi tager fat i a href i html. Så vælger vi hvilken fil (html) den går til. Spørgsmålstegnet er når man bruger et link. Id er alle nyheder samlet. "nyheder. id" er måden vi får fat i de individuelle nyheder fra wordpress.
+                klon.querySelector("a").href = "nyhedersingleview.html" + "?" + "id=" + nyhed.id; // vi tager fat i a href i html. Så vælger vi hvilken html fil den går til. Spørgsmålstegnet er når man bruger et link. Id er alle nyheder samlet og "nyheder. id" er måden vi får fat i de individuelle nyheder fra wordpress.
                 dest.appendChild(klon);
             })
 
