@@ -384,6 +384,7 @@ h3 {
     direction: ltr;
 }
 
+/*--- Vi har fundet på nettet ---*/
 .search input[type=text]:hover {
 
     color: #FF6600;
@@ -423,8 +424,8 @@ h3 {
 
 
 .burgermenu {
+    /* har overflow:hidden fordi */
     overflow: hidden;
-    /* skal som udgangspunkt have overflow:hidden */
     background-color: #8C8279;
     position: relative;
     width: 100vw;
@@ -449,6 +450,7 @@ h3 {
     text-decoration: none;
     font-size: 20px;
     display: block;
+    /*gør at alle a i class'en burgermenu, ligger i lodret */
     text-align: center;
 }
 
@@ -698,21 +700,15 @@ h1 {
 }
 
 #prismet {
-    /*    background-color: #8bacb8;*/
     background-color: #c6a283;
-
 }
 
 #vandretur {
-    /*    background-color: #8bacb8;*/
     background-color: #8C8279;
-
 }
 
 #undervisningsforloeb {
-    /*    background-color: #8eb7c7;*/
     background-color: #7799A6;
-    ´
 }
 
 .bog_ikon {
@@ -1037,7 +1033,6 @@ h1 {
 
 #undervisningsforloeb h2 {
     color: white;
-
 }
 
 .undervisningstekst {
@@ -1051,7 +1046,6 @@ h1 {
 .undervisning img {
     margin-top: 2vw;
     width: 100%;
-
 }
 
 .undervisning h2 {
@@ -1479,6 +1473,7 @@ footer img {
         grid-template-columns: 1fr 1fr;
     }
 
+    /*tager fat i det sidste child element*/
     #undervisning div:nth-child(2) {
         margin-left: 2vw;
     }
@@ -1513,7 +1508,6 @@ footer img {
     #guidede_ture img {
         width: 43vw;
         padding-top: 3vw;
-
     }
 
     /*RUNDVISNING*/
@@ -1592,7 +1586,6 @@ footer img {
     }
 
 
-
     /*--------------------------Forside Om os-----------------------*/
     #forside_om_os {
         padding-left: 30vw;
@@ -1600,7 +1593,6 @@ footer img {
         padding-top: 5vw;
         padding-bottom: 5vw;
         margin: 0;
-
     }
 
     #forside_om_os h2 {
@@ -1612,9 +1604,7 @@ footer img {
 
     #grid {
 
-        /*
-        grid-template-areas: 'map map nyheder';
-*/
+        /*grid-template-areas: 'map map nyheder';*/
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1673,7 +1663,6 @@ footer img {
 
     #om_os p {
         text-align: center;
-
     }
 
     #koldkrig {
@@ -1705,8 +1694,6 @@ footer img {
         left: 93vw;
         top: 2vw;
     }
-
-
 
 
     /*-------------------------Footer-----------------------*/
