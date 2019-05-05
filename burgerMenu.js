@@ -1,6 +1,6 @@
 // BURGER MENU
 function myFunction() {
-    var x = document.getElementById("myLinks");
+    var x = document.getElementById("myLinks");// Hvis vores links har display block, vises linksne. Hvis de har display none skjules de.
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
@@ -11,14 +11,14 @@ function myFunction() {
 
 
 window.onscroll = function () {
-    stickyFunction();
+    stickyFunction(); // Vi kalder sticky funktionen
     scrollFunction();
 };
 
 var header = document.getElementById("myBurgermenu");
 var sticky = header.offsetTop;
 
-// denne funktion stickyFunction er tager fra w3schools. https://www.w3schools.com/howto/howto_js_sticky_header.asp. Vi har brugt den til at lave vores burger menu sticky.
+// denne funktion stickyFunction er taget fra w3schools. https://www.w3schools.com/howto/howto_js_sticky_header.asp. Vi har brugt den til at lave vores burger menu sticky.
 function stickyFunction() {
     if (window.pageYOffset > sticky) { //når YOffset er større end sticky, skal den tilføje class sticky
         header.classList.add("sticky");
