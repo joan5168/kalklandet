@@ -166,7 +166,7 @@ h3 {
     /* hvor længe den skal vare*/
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
-    /* hvor mange gange? */
+    /* hvor mange gange, den skal kører, vi har valgt uendelig */
     animation-direction: alternate-reverse;
     background-image: url(billeder/SVG/pil_til_forside_tyk.svg);
     background-repeat: no-repeat;
