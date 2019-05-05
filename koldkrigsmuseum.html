@@ -214,7 +214,7 @@
     <script>
         let indhold; // Variabel
         console.log("indhold");
-        document.addEventListener("DOMContentLoaded", getJson); // programmet går igang når DOM er loaded.
+        document.addEventListener("DOMContentLoaded", getJson); // functionen getJson går igang når DOM er loaded.
 
 
         // introtekst + billede
@@ -303,7 +303,8 @@
         function visUndervisningstekst() {
             console.log(document.querySelector(".undervisning"));
             document.querySelector("#undervisningsforloeb .undervisningstekst").innerHTML = indhold.undervisnings_tekst;
-        } //placering af indhold fra JSON fil i html
+        } //placering af indhold fra WP JSON fil i html
+
     </script>
 </body>
 
