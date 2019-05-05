@@ -219,12 +219,12 @@
 
         // introtekst + billede
         async function getJson() {
-            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256"; //tager fat JSON-filen
-            const myJson = await fetch(url); //Henter indholdet fra JSON-filen
+            const url = "http://www.julieprieme.dk/kea/kalklandet/wordpress/wp-json/wp/v2/attraktioner/256"; //tager fat WP JSON-filen
+            const myJson = await fetch(url); //Henter indholdet fra WP JSON-filen
             console.log(myJson);
 
             indhold = await myJson.json(); //placerer indholdet i "indhold" variablen
-            console.log(indhold);
+            console.log(indhold); // så vi kan tjekke i inspect om getJson funktionen bliver kørt igennem
 
             visIndhold(); //kalder på visIndhold funktion.
             getJson2(); //kalder på getJson2 funktion.
