@@ -1,6 +1,6 @@
-// BURGER MENU
+// denne funtion myFunction er taget fra w3schools. https://www.w3schools.com/howto/howto_js_mobile_navbar.asp. Vi har brugt denne kode til at lave vores burgermenu, dog med ændringer i styling af css.
 function myFunction() {
-    var x = document.getElementById("myLinks");// Hvis vores links har display block, vises linksne. Hvis de har display none skjules de.
+    var x = document.getElementById("myLinks"); // Hvis vores links har display block, vises linksne. Hvis de har display none skjules de.
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
@@ -12,7 +12,7 @@ function myFunction() {
 
 window.onscroll = function () {
     stickyFunction(); // Vi kalder sticky funktionen
-    scrollFunction();
+    scrollFunction(); // Vi kalder scroll funktionen
 };
 
 var header = document.getElementById("myBurgermenu");
