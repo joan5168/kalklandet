@@ -424,8 +424,8 @@ h3 {
 
 
 .burgermenu {
-    /* har overflow:hidden fordi */
     overflow: hidden;
+    /* burgermenuen bliver i sin box */
     background-color: #8C8279;
     position: relative;
     width: 100vw;
@@ -433,12 +433,12 @@ h3 {
     top: 0vw;
     opacity: 0.8;
     z-index: 10;
-    /* skal ligge øverst */
+    /* skal ligge forrest */
 }
 
 .burgermenu #myLinks {
     display: none;
-    /* linksene skal som udgangspunkt ikke vises */
+    /* linksene skal som udgangspunkt ikke vises*/
 }
 
 .burgermenu a {

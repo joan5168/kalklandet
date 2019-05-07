@@ -1,3 +1,4 @@
+//BURGERMENU show/hide
 // denne funtion myFunction er taget fra w3schools. https://www.w3schools.com/howto/howto_js_mobile_navbar.asp. Vi har brugt denne kode til at lave vores burgermenu, dog med ændringer i styling af css.
 function myFunction() {
     var x = document.getElementById("myLinks"); // Hvis vores links har display block, vises linksne. Hvis de har display none skjules de.
@@ -15,12 +16,14 @@ window.onscroll = function () {
     scrollFunction(); // Vi kalder scroll funktionen
 };
 
+//BURGERMENU STICKY
+
 var header = document.getElementById("myBurgermenu");
 var sticky = header.offsetTop;
 
 // denne funktion stickyFunction er taget fra w3schools. https://www.w3schools.com/howto/howto_js_sticky_header.asp. Vi har brugt den til at lave vores burger menu sticky.
 function stickyFunction() {
-    if (window.pageYOffset > sticky) { //når YOffset er større end sticky, skal den tilføje class sticky
+    if (window.pageYOffset > sticky) { //når YOffset er større end 0 (som vi har sat den til i css), skal den tilføje class sticky
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky"); // ellers skal den fjernes
@@ -33,10 +36,7 @@ function closeFunction(x) {
 
 
 
-// GO TO TOP
-
-
-
+// GO TO TOP BUTTON
 function scrollFunction() {
     console.log("scroll function");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { // Når du scroller 20px fra the toppen af dokumentet, vis button
